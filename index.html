@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Travels | Premium Chauffeur Fleet & Luxury Vans Across India</title>
+  <meta name="description" content="Book premium chauffeur-driven car rentals, 20-seater Force Urbania Maharaja luxury vans, tempo travellers, and AC sleeper buses with Abhishek Travels. 24/7 service across India." />
+  <meta name="keywords" content="Abhishek Travels, car rental Ahmedabad, Force Urbania Maharaja, Tempo Traveller rental, Innova Crysta rental, Gujarat tour cab, luxury bus rental" />
+  
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS Engine -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Master 3D Stylesheet -->
+  <link rel="stylesheet" href="src/index.css" />
+
+  <!-- Vite React Module Entry -->
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- React 18 & Babel Standalone Fallback -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-[#09090b] text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
+  <div id="root">
+    <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #09090b; color: #f8fafc; font-family: 'Outfit', sans-serif;">
+      <div style="width: 46px; height: 46px; border: 3px solid rgba(255,255,255,0.1); border-top-color: #f59e0b; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 16px;"></div>
+      <h2 style="font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 4px; color: #fbbf24;">Abhishek Travels</h2>
+      <p style="color: #a1a1aa; font-size: 0.875rem;">Initializing Royal 3D Fleet Experience...</p>
+    </div>
+    <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
+  </div>
+
+  <!-- Inline Babel script executes directly with Tailwind & React 18 -->
+  <script type="text/babel">
+    const { useState, useEffect, useMemo } = React;
+
+    // --- Lucide-style SVG Icons ---
+    const IconShield = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+    );
+
+    const IconSparkles = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+        <path d="M5 3v4" /><path d="M19 17v4" /><path d="M3 5h4" /><path d="M17 19h4" />
+      </svg>
+    );
+
+    const IconZap = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+      </svg>
+    );
+
+    const IconTag = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z" />
+        <path d="M7 7h.01" />
+      </svg>
+    );
+
+    const IconMapPin = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+        <circle cx="12" cy="10" r="3" />
+      </svg>
+    );
+
+    const IconCrown = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14" />
+      </svg>
+    );
+
+    const IconPhone = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+    );
+
+    const IconMessageCircle = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" />
+      </svg>
+    );
+
+    const IconUsers = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    );
+
+    const IconCar = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9C2.1 11.2 2 11.6 2 12v4c0 .6.4 1 1 1h2" />
+        <circle cx="7" cy="17" r="2" />
+        <path d="M9 17h6" />
+        <circle cx="17" cy="17" r="2" />
+      </svg>
+    );
+
+    const IconStar = ({ size = 20, className = '', fill = 'currentColor' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill={fill} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </svg>
+    );
+
+    const IconCheck = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+    );
+
+    const IconClock = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </svg>
+    );
+
+    const IconSearch = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.3-4.3" />
+      </svg>
+    );
+
+    const IconX = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    );
+
+    const IconArrowRight = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    );
+
+    const IconChevronDown = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    );
+
+    const IconAward = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <circle cx="12" cy="8" r="6" />
+        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+      </svg>
+    );
+
+    const IconBuilding = ({ size = 20, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
+        <path d="M9 22v-4h6v4" /><path d="M8 6h.01" /><path d="M16 6h.01" /><path d="M8 10h.01" /><path d="M16 10h.01" /><path d="M8 14h.01" /><path d="M16 14h.01" />
+      </svg>
+    );
+
+    // --- 3D UI Primitives ---
+    const ThreeDIconTile = ({ icon, variant = 'gold', size = 'md', className = '' }) => {
+      const variantStyles = {
+        gold: 'from-amber-400/50 via-yellow-400/30 to-amber-600/40 border-amber-300/60 text-amber-300 shadow-[0_8px_24px_-6px_rgba(245,158,11,0.6)]',
+        amber: 'from-amber-500/40 via-yellow-500/20 to-orange-500/30 border-amber-400/40 text-amber-400 shadow-[0_8px_20px_-6px_rgba(245,158,11,0.5)]',
+        orange: 'from-orange-500/40 via-amber-500/20 to-red-500/30 border-orange-400/40 text-orange-400 shadow-[0_8px_20px_-6px_rgba(249,115,22,0.5)]',
+        emerald: 'from-emerald-600/40 via-teal-500/20 to-green-600/30 border-emerald-400/40 text-emerald-400 shadow-[0_8px_20px_-6px_rgba(16,185,129,0.5)]',
+        blue: 'from-blue-600/40 via-blue-500/20 to-indigo-600/30 border-blue-400/40 text-blue-400 shadow-[0_8px_20px_-6px_rgba(37,99,235,0.5)]',
+        purple: 'from-purple-600/40 via-indigo-500/20 to-pink-600/30 border-purple-400/40 text-purple-400 shadow-[0_8px_20px_-6px_rgba(168,85,247,0.5)]',
+        cyan: 'from-cyan-600/40 via-sky-500/20 to-blue-600/30 border-cyan-400/40 text-cyan-400 shadow-[0_8px_20px_-6px_rgba(6,182,212,0.5)]'
+      };
+      const sizeStyles = {
+        sm: 'w-10 h-10 rounded-xl text-lg',
+        md: 'w-14 h-14 rounded-2xl text-2xl',
+        lg: 'w-18 h-18 rounded-3xl text-3xl'
+      };
+
+      return (
+        <div className={`relative group/icon inline-flex items-center justify-center bg-gradient-to-br ${variantStyles[variant] || variantStyles.gold} ${sizeStyles[size] || sizeStyles.md} border backdrop-blur-md transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-2xl ${className}`}>
+          <div className="absolute inset-x-0 top-0 h-[30%] bg-gradient-to-b from-white/30 to-transparent rounded-t-[inherit] pointer-events-none" />
+          <div className="relative z-10 flex items-center justify-center transition-transform duration-300 group-hover/icon:scale-110">
+            {icon}
+          </div>
+        </div>
+      );
+    };
+
+    const FloatingPill = ({ children, className = '', variant = 'gold' }) => {
+      const pillVariants = {
+        gold: 'bg-amber-500/15 border-amber-400/30 text-amber-300 shadow-[0_4px_16px_-4px_rgba(245,158,11,0.3)]',
+        amber: 'bg-amber-500/15 border-amber-400/30 text-amber-300 shadow-[0_4px_16px_-4px_rgba(245,158,11,0.3)]',
+        orange: 'bg-orange-500/15 border-orange-400/30 text-orange-300 shadow-[0_4px_16px_-4px_rgba(249,115,22,0.3)]',
+        emerald: 'bg-emerald-500/15 border-emerald-400/30 text-emerald-300 shadow-[0_4px_16px_-4px_rgba(16,185,129,0.3)]',
+        blue: 'bg-blue-500/15 border-blue-400/30 text-blue-300 shadow-[0_4px_16px_-4px_rgba(59,130,246,0.3)]',
+        purple: 'bg-purple-500/15 border-purple-400/30 text-purple-300 shadow-[0_4px_16px_-4px_rgba(168,85,247,0.3)]',
+        cyan: 'bg-cyan-500/15 border-cyan-400/30 text-cyan-300 shadow-[0_4px_16px_-4px_rgba(6,182,212,0.3)]'
+      };
+
+      return (
+        <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide border backdrop-blur-md transition-all duration-300 ${pillVariants[variant] || pillVariants.gold} ${className}`}>
+          {children}
+        </span>
+      );
+    };
+
+    // --- Data Constants ---
+    const COMPANY_INFO = {
+      name: 'Abhishek Travels',
+      tagline: 'Premium Car Rental & Chauffeur Services Across India',
+      phone: '+919825045916',
+      phoneDisplay: '+91 98250 45916',
+      whatsappNumber: '919825045916',
+      location: 'Ahmedabad, Gujarat, India',
+      officeAddress: 'Abhishek Travels, Near SG Highway, Ahmedabad, Gujarat - 380054',
+      email: 'booking@abhishektravels.in',
+      hours: '24/7 Available (365 Days a Year)',
+      experienceYears: '15+',
+      tripsCompleted: '50,000+',
+      fleetSize: '75+ Vehicles',
+      happyClients: '99%'
+    };
+
+    const VEHICLE_CATEGORIES = [
+      { id: '5-seater', label: '5-Seater Cars' },
+      { id: '7-seater', label: '7-Seater SUVs / MUVs' },
+      { id: 'tempo', label: 'Force Urbania & Tempo' },
+      { id: 'bus', label: 'Luxury Buses & Sleeper' }
+    ];
+
+    const VEHICLES = [
+      // 5-Seater (Default Base)
+      {
+        id: 'dzire',
+        name: 'Maruti Suzuki Dzire',
+        category: '5-seater',
+        categoryLabel: '5-Seater Sedan',
+        capacity: '4 + 1 Passengers',
+        image: 'images/dzire.png',
+        badge: 'Most Popular Sedan',
+        description: 'Exceptional fuel economy, plush comfortable ride, and ample boot space. Perfect for city tours, corporate meetings, and outstation trips.',
+        specs: ['Airbags', 'Chilled AC', 'Bluetooth Audio', 'Large Boot Space', 'Clean Interiors']
+      },
+      {
+        id: 'aura',
+        name: 'Hyundai Aura',
+        category: '5-seater',
+        categoryLabel: '5-Seater Sedan',
+        capacity: '4 + 1 Passengers',
+        image: 'images/aura.png',
+        badge: 'Executive Sedan',
+        description: 'Modern styling with refined petrol engine, silent cabin, and smooth suspension for long highway cruising and airport pickups.',
+        specs: ['Dual Airbags', 'Automatic Climate Control', 'USB Fast Charging', 'Plush Seats']
+      },
+      {
+        id: 'amaze',
+        name: 'Honda Amaze',
+        category: '5-seater',
+        categoryLabel: '5-Seater Sedan',
+        capacity: '4 + 1 Passengers',
+        image: 'images/amaze.png',
+        badge: 'Spacious & Smooth',
+        description: 'Premium Honda engineering featuring unmatched rear legroom, class-leading 420-liter trunk capacity, and whisper-quiet suspension.',
+        specs: ['Airbags & ABS', 'Rear AC Vents', 'Touchscreen Infotainment', 'Large Trunk']
+      },
+      {
+        id: 'swift',
+        name: 'Maruti Suzuki Swift',
+        category: '5-seater',
+        categoryLabel: '5-Seater Hatchback',
+        capacity: '4 + 1 Passengers',
+        image: 'images/swift.png',
+        badge: 'Economy Choice',
+        description: 'Sporty and compact hatchback designed for nimble city maneuvering, efficient airport transfers, and affordable budget travel.',
+        specs: ['Dual Airbags', 'Powerful AC', 'Music System', 'Compact & Nimble']
+      },
+
+      // 7-Seater
+      {
+        id: 'innova-crysta',
+        name: 'Toyota Innova Crysta',
+        category: '7-seater',
+        categoryLabel: '7-Seater Premium MUV',
+        capacity: '6/7 + 1 Passengers',
+        image: 'images/innova-crysta.png',
+        badge: 'King of Highway',
+        description: 'The undisputed benchmark for long-distance family travel. Luxurious captain seats, immense boot space, and unstoppable highway comfort.',
+        specs: ['Captain Recliners', 'Roof-mounted AC', '7 Airbags & ABS', 'Carrier Available', 'High-Speed Stability']
+      },
+      {
+        id: 'innova-hycross',
+        name: 'Toyota Innova Hycross',
+        category: '7-seater',
+        categoryLabel: '7-Seater Luxury Hybrid',
+        capacity: '6/7 + 1 Passengers',
+        image: 'images/innova-hycross.png',
+        badge: 'Ultra Luxury 2024',
+        description: 'Next-generation luxury with ultra-refined hybrid engine, Ottoman recliner seating, panoramic sunroof, and VIP limousine feel.',
+        specs: ['Ottoman Lounge Seats', 'Dual-Zone Auto AC', 'Panoramic Sunroof', 'VIP Ambient Lights']
+      },
+      {
+        id: 'ertiga',
+        name: 'Maruti Suzuki Ertiga',
+        category: '7-seater',
+        categoryLabel: '7-Seater Budget MUV',
+        capacity: '6 + 1 Passengers',
+        image: 'images/ertiga.png',
+        badge: 'Best Value 7-Seater',
+        description: 'The smart choice for family vacations and group trips. Highly comfortable seating, roof AC vents, and reliable performance.',
+        specs: ['Dual AC Vents', 'Reclining 2nd & 3rd Row', 'Luggage Carrier', 'USB Ports']
+      },
+      {
+        id: 'carens',
+        name: 'Kia Carens',
+        category: '7-seater',
+        categoryLabel: '7-Seater Luxury RV',
+        capacity: '6/7 + 1 Passengers',
+        image: 'images/carens.png',
+        badge: 'Modern Hi-Tech',
+        description: 'Sophisticated 3-row recreational vehicle with aircraft-style seatback tables, ventilated front seats, and serene ride quality.',
+        specs: ['6 Airbags Standard', 'Roof AC Diffusers', 'Bose Audio System', 'One-Touch Tumble Seats']
+      },
+      {
+        id: 'xylo',
+        name: 'Mahindra Xylo',
+        category: '7-seater',
+        categoryLabel: '7-Seater Heavy Duty',
+        capacity: '7 + 1 Passengers',
+        image: 'images/xylo.png',
+        badge: 'Rugged Performer',
+        description: 'Generous headroom, massive legroom in all three rows, and solid suspension built to conquer rough roads and pilgrimage routes.',
+        specs: ['Surround AC', 'Spacious Theatre Seating', 'High Ground Clearance', 'Rooftop Luggage Carrier']
+      },
+
+      // Force Urbania & Tempo
+      {
+        id: 'urbania-maharaja',
+        name: 'Force Urbania (Maharaja Luxury)',
+        category: 'tempo',
+        categoryLabel: '20-Seater Maharaja Luxury',
+        capacity: '17 to 20 Passengers',
+        image: 'images/tempo-20.png',
+        badge: 'VIP Presidential Suite',
+        description: 'International styling with 1x1 / 2x1 Maharaja plush recliner bucket seats, individual aircraft-style AC vents, panoramic sealed windows, and LED ambient cabin lighting.',
+        specs: ['Maharaja 1x1 Recliners', 'Individual AC Vents', 'Ambient RGB Lighting', 'LED TV & Hi-Fi Audio', 'Air Suspension']
+      },
+      {
+        id: 'urbania-standard',
+        name: 'Force Urbania (Standard Seating)',
+        category: 'tempo',
+        categoryLabel: '20-Seater Executive Van',
+        capacity: '20 + 1 Passengers',
+        image: 'images/tempo-17.png',
+        badge: 'Corporate & Wedding Favorite',
+        description: 'Next-generation executive van with high headroom, individual reading lights, ergonomic high-back pushback seats, and expansive luggage bay.',
+        specs: ['Pushback Seats', 'Dual High-Capacity AC', 'Full Stand-Up Height', 'USB at Every Seat']
+      },
+      {
+        id: 'tempo-12-maharaja',
+        name: '12-Seater Maharaja Tempo Traveller',
+        category: 'tempo',
+        categoryLabel: '12-Seater 1x1 Maharaja',
+        capacity: '12 + 1 Passengers',
+        image: 'images/tempo-12.png',
+        badge: '1x1 Maharaja Recliners',
+        description: 'Custom-built luxury traveller with 1x1 wide Maharaja sofa seats, generous walkway, charging sockets on every seat, and premium audio setup.',
+        specs: ['1x1 Sofa Recliner Seats', 'Direct & Indirect Mood Lighting', 'High Cooling Dual AC', 'Mic & Audio System']
+      },
+      {
+        id: 'tempo-9',
+        name: '9-Seater Luxury Tempo Traveller',
+        category: 'tempo',
+        categoryLabel: '9-Seater VIP Executive',
+        capacity: '9 + 1 Passengers',
+        image: 'images/tempo-9.png',
+        badge: 'VIP Small Group',
+        description: 'Exclusive 9-seater luxury cabin with captain sofa chairs, ample legroom for tall passengers, and smooth highway handling.',
+        specs: ['Captain Sofa Seats', 'Powerful AC', 'Smart Android TV', 'Big Luggage Space']
+      },
+      {
+        id: 'tempo-15-17',
+        name: '15 / 17 Seater Tempo Traveller',
+        category: 'tempo',
+        categoryLabel: '17-Seater Group Tourer',
+        capacity: '15-17 Passengers',
+        image: 'images/tempo-15.png',
+        badge: 'Family Tour Specialist',
+        description: 'The most popular choice for family pilgrimages to Somnath, Dwarka, Statue of Unity, and Rajasthan tours. Dependable, comfortable, and roomy.',
+        specs: ['2x1 Pushback Seats', 'Front & Rear AC', 'Roof Luggage Carrier', 'Music & Video Screen']
+      },
+
+      // Buses & Sleeper
+      {
+        id: 'bus-25',
+        name: '25-Seater Mini Luxury Bus',
+        category: 'bus',
+        categoryLabel: '25-Seater AC Coach',
+        capacity: '25 Passengers',
+        image: 'images/bus-25.png',
+        badge: 'Corporate Events & Tours',
+        description: 'Perfect intermediate size bus for corporate day outs, school picnics, and wedding guest transportation with high-deck comfort.',
+        specs: ['2x2 High-Back Pushback', 'Chilled Central AC', 'PA Microphone System', 'Air Suspension']
+      },
+      {
+        id: 'bus-35',
+        name: '35-Seater Executive Coach',
+        category: 'bus',
+        categoryLabel: '35-Seater Luxury Bus',
+        capacity: '35 Passengers',
+        image: 'images/bus-35.png',
+        badge: 'Group Travel Specialist',
+        description: 'High-floor luxury coach featuring panoramic glass windows, curtains, reclining seats with footrests, and expansive under-floor luggage hold.',
+        specs: ['2x2 Luxury Recliners', 'Underbody Luggage Hold', 'LED Entertainment', 'Smooth Air Bellows']
+      },
+      {
+        id: 'bus-45-56',
+        name: '45 / 49 / 56 Seater BharatBenz Luxury Bus',
+        category: 'bus',
+        categoryLabel: '56-Seater Volvo / BharatBenz',
+        capacity: '45 to 56 Passengers',
+        image: 'images/bus-45.png',
+        badge: 'Mega Group Tourer',
+        description: 'Full-size luxury touring coach with BharatBenz / Volvo chassis, ultra-smooth air suspension, plush seating, and emergency exits for ultimate safety.',
+        specs: ['Air Suspension', 'Central Digital AC', 'Emergency Exit Safety', 'Mobile Charging Ports', 'Microphone System']
+      },
+      {
+        id: 'sleeper-bus',
+        name: 'Luxury AC Sleeper Coach (2x1)',
+        category: 'bus',
+        categoryLabel: '2x1 Luxury Sleeper',
+        capacity: '30 Berths (Upper / Lower)',
+        image: 'images/bus.png',
+        badge: 'Overnight Journey Star',
+        description: 'Spacious 2x1 AC sleeper berths with cozy mattresses, privacy curtains, individual charging points, reading lamps, and quiet night cruising.',
+        specs: ['2x1 Upper & Lower Berths', 'Individual Charging & Lights', 'Privacy Curtains', 'Air Suspension', 'Luggage Compartment']
+      }
+    ];
+
+    const DEFAULT_REVIEWS = [
+      {
+        id: 1,
+        name: "Rajesh Patel",
+        rating: 5,
+        date: "2 days ago",
+        trip: "Ahmedabad to Somnath - Dwarka (5 Days)",
+        text: "Excellent service! The Innova was spotless, smelling fresh, and the chauffeur was extremely professional and courteous. Highly recommend Abhishek Travels for all outstation family tours."
+      },
+      {
+        id: 2,
+        name: "Sneha Sharma",
+        rating: 5,
+        date: "1 week ago",
+        trip: "Family Wedding Tour (Ahmedabad to Udaipur)",
+        text: "We booked the 20-seater Force Urbania with Maharaja seats for our destination wedding in Udaipur. The comfort was unbelievable! Everyone in the family praised the smooth ride and music system."
+      },
+      {
+        id: 3,
+        name: "Amit Desai",
+        rating: 5,
+        date: "2 weeks ago",
+        trip: "Corporate Delegate Airport Transfers",
+        text: "The best premium car rental service in Ahmedabad! I consistently rely on them for VIP business clients visiting our corporate hub. Prompt timings, neat attire, and billing without any surprises."
+      },
+      {
+        id: 4,
+        name: "Vikram Mehta",
+        rating: 5,
+        date: "3 weeks ago",
+        trip: "Ahmedabad to Statue of Unity",
+        text: "Outstanding trip to the Statue of Unity! Punctual pickup at 5:30 AM, clean seats, well-functioning AC vents, and very polite driver. Best rates in Ahmedabad."
+      },
+      {
+        id: 5,
+        name: "Pooja Trivedi",
+        rating: 5,
+        date: "1 month ago",
+        trip: "Mount Abu Weekend Getaway",
+        text: "Very affordable and safe ride with experienced mountain driver. AC was chilling even in peak noon. 10/10 service!"
+      }
+    ];
+
+    const getStoredReviews = () => {
+      try {
+        const saved = localStorage.getItem('abhishek_travels_customer_reviews');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+      } catch (e) {}
+      return DEFAULT_REVIEWS;
+    };
+
+    const saveNewReview = (newReview) => {
+      try {
+        const current = getStoredReviews();
+        const updated = [
+          { id: Date.now(), date: "Just now", trip: newReview.trip || "Verified Trip", ...newReview },
+          ...current
+        ];
+        localStorage.setItem('abhishek_travels_customer_reviews', JSON.stringify(updated));
+        return updated;
+      } catch (e) {
+        return DEFAULT_REVIEWS;
+      }
+    };
+
+    // --- Master React Application ---
+    function App() {
+      const [activeSection, setActiveSection] = useState('home');
+      const [activeCategory, setActiveCategory] = useState('5-seater'); // Default 5-seater base
+      const [selectedCarId, setSelectedCarId] = useState('dzire'); // Default 5-seater Maruti Dzire
+      const [searchQuery, setSearchQuery] = useState('');
+      const [bookingVehicle, setBookingVehicle] = useState(null);
+      const [isModalOpen, setIsModalOpen] = useState(false);
+      const [isScrolled, setIsScrolled] = useState(false);
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+      const [reviews, setReviews] = useState(getStoredReviews);
+      const [openFaq, setOpenFaq] = useState(0);
+
+      // Review Form State
+      const [revName, setRevName] = useState('');
+      const [revRating, setRevRating] = useState('5');
+      const [revTrip, setRevTrip] = useState('');
+      const [revText, setRevText] = useState('');
+      const [showSuccessToast, setShowSuccessToast] = useState(false);
+
+      // Hero Trip Selector State
+      const [heroCategory, setHeroCategory] = useState('5-seater');
+      const [heroTripType, setHeroTripType] = useState('outstation');
+      const [heroDestination, setHeroDestination] = useState('');
+
+      useEffect(() => {
+        const handleScroll = () => {
+          setIsScrolled(window.scrollY > 20);
+          const sections = ['home', 'vehicles', 'why-us', 'reviews', 'contact'];
+          const scrollPos = window.scrollY + 200;
+          for (const s of sections) {
+            const el = document.getElementById(s);
+            if (el) {
+              const top = el.offsetTop;
+              const h = el.offsetHeight;
+              if (scrollPos >= top && scrollPos < top + h) {
+                setActiveSection(s);
+                break;
+              }
+            }
+          }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+
+      const navigateTo = (id) => {
+        setActiveSection(id);
+        setMobileMenuOpen(false);
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      const openBooking = (vehicle = null) => {
+        setBookingVehicle(vehicle);
+        setIsModalOpen(true);
+      };
+
+      // Cars belonging to the active category
+      const categoryVehicles = useMemo(() => {
+        return VEHICLES.filter(v => v.category === activeCategory);
+      }, [activeCategory]);
+
+      // Ensure selectedCarId belongs to current category
+      useEffect(() => {
+        const exists = categoryVehicles.some(v => v.id === selectedCarId);
+        if (!exists && categoryVehicles.length > 0) {
+          setSelectedCarId(categoryVehicles[0].id);
+        }
+      }, [activeCategory, categoryVehicles, selectedCarId]);
+
+      // Only the clicked car is shown
+      const clickedVehicle = useMemo(() => {
+        if (searchQuery.trim()) {
+          const q = searchQuery.toLowerCase().trim();
+          const found = VEHICLES.find(v => 
+            v.name.toLowerCase().includes(q) || 
+            v.categoryLabel.toLowerCase().includes(q)
+          );
+          if (found) return found;
+        }
+        return VEHICLES.find(v => v.id === selectedCarId) || categoryVehicles[0] || VEHICLES[0];
+      }, [selectedCarId, categoryVehicles, searchQuery]);
+
+      const handleHeroSearch = (e) => {
+        e.preventDefault();
+        setActiveCategory(heroCategory);
+        const firstCar = VEHICLES.find(v => v.category === heroCategory);
+        if (firstCar) setSelectedCarId(firstCar.id);
+        navigateTo('vehicles');
+      };
+
+      const handleReviewSubmit = (e) => {
+        e.preventDefault();
+        if (!revName.trim() || !revText.trim()) return;
+        const updated = saveNewReview({
+          name: revName.trim(),
+          rating: parseInt(revRating, 10),
+          trip: revTrip.trim() || 'Verified Customer Tour',
+          text: revText.trim()
+        });
+        setReviews(updated);
+        setRevName('');
+        setRevText('');
+        setRevTrip('');
+        setRevRating('5');
+        setShowSuccessToast(true);
+        setTimeout(() => setShowSuccessToast(false), 4000);
+      };
+
+      const renderStars = (cnt) => {
+        return Array.from({ length: 5 }, (_, i) => (
+          <IconStar 
+            key={i} 
+            size={14} 
+            className={i < cnt ? 'text-yellow-400' : 'text-slate-600'} 
+            fill={i < cnt ? 'currentColor' : 'none'} 
+          />
+        ));
+      };
+
+      const featuredFleet = [
+        {
+          car: VEHICLES.find(v => v.id === 'innova-crysta') || VEHICLES[4],
+          tag: 'Most Booked SUV',
+          seatText: '6/7 Passengers'
+        },
+        {
+          car: VEHICLES.find(v => v.id === 'urbania-maharaja') || VEHICLES[9],
+          tag: 'VIP Maharaja 20-Seater',
+          seatText: '20 Passengers'
+        },
+        {
+          car: VEHICLES.find(v => v.id === 'dzire') || VEHICLES[0],
+          tag: 'Top Executive Sedan',
+          seatText: '4+1 Passengers'
+        },
+        {
+          car: VEHICLES.find(v => v.id === 'bus-25') || VEHICLES[14],
+          tag: 'Luxury Group Coach',
+          seatText: '25-56 Seats'
+        }
+      ];
+
+      return (
+        <div className="min-h-screen flex flex-col bg-[#09090b] text-slate-100 font-sans">
+          
+          {/* Header */}
+          <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-950/90 backdrop-blur-xl border-b border-amber-500/20 shadow-[0_10px_30px_rgba(0,0,0,0.8)] py-3' : 'bg-slate-950/60 backdrop-blur-md border-b border-white/5 py-4'}`}>
+            <div className="container-custom flex items-center justify-between">
+              
+              <a 
+                href="#home" 
+                className="flex items-center gap-3.5 group"
+                onClick={(e) => { e.preventDefault(); navigateTo('home'); }}
+              >
+                <div className="relative w-11 h-11 rounded-xl p-0.5 bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 shadow-[0_4px_16px_rgba(245,158,11,0.4)] transition-transform duration-300 group-hover:scale-105">
+                  <div className="w-full h-full bg-slate-950 rounded-[10px] overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="images/logo.png" 
+                      alt="Abhishek Travels" 
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" 
+                      onError={(e) => { e.target.style.display = 'none'; }} 
+                    />
+                  </div>
+                  <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white/30 to-transparent rounded-t-xl pointer-events-none" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="font-extrabold text-xl tracking-tight text-white group-hover:text-amber-400 transition-colors">
+                    Abhishek Travels
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                    Royal Chauffeur Fleet
+                  </span>
+                </div>
+              </a>
+
+              <nav className="hidden md:flex items-center p-1.5 rounded-full bg-slate-900/70 border border-white/10 backdrop-blur-xl shadow-inner">
+                {['home', 'vehicles', 'why-us', 'reviews', 'contact'].map(secId => {
+                  const labels = { 'home': 'Home', 'vehicles': 'Our Fleet', 'why-us': 'Why Us', 'reviews': 'Reviews', 'contact': 'Contact' };
+                  const isActive = activeSection === secId;
+                  return (
+                    <button
+                      key={secId}
+                      className={`relative px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${isActive ? 'text-zinc-950 font-bold shadow-md' : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'}`}
+                      onClick={() => navigateTo(secId)}
+                    >
+                      {isActive && (
+                        <span className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)] -z-10 animate-fade-in" />
+                      )}
+                      <span className="relative z-10 flex items-center gap-1.5">
+                        {labels[secId]}
+                        {isActive && <span className="w-1.5 h-1.5 rounded-full bg-zinc-950 animate-ping"></span>}
+                      </span>
+                    </button>
+                  );
+                })}
+              </nav>
+
+              <div className="flex items-center gap-3.5">
+                <a 
+                  href={`tel:${COMPANY_INFO.phone}`} 
+                  className="hidden lg:flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-slate-900/80 border border-amber-500/20 text-slate-200 hover:border-amber-400/50 hover:bg-amber-500/10 hover:text-white transition-all text-xs font-semibold shadow-sm group"
+                >
+                  <div className="w-6 h-6 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <IconPhone size={13} />
+                  </div>
+                  <span>{COMPANY_INFO.phoneDisplay}</span>
+                </a>
+
+                <button 
+                  className="btn-shimmer relative px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs tracking-wide shadow-[0_4px_20px_rgba(245,158,11,0.4)] hover:shadow-[0_6px_25px_rgba(245,158,11,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-2 border border-yellow-300/60"
+                  onClick={() => openBooking(null)}
+                >
+                  <IconZap size={14} className="text-zinc-950 animate-bounce" />
+                  <span>Instant Booking</span>
+                </button>
+
+                <button
+                  className="md:hidden p-2 rounded-xl bg-slate-900 border border-white/10 text-slate-300 hover:text-white"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  aria-label="Toggle menu"
+                >
+                  {mobileMenuOpen ? <IconX size={22} /> : (
+                    <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" fill="none" strokeWidth="2.5">
+                      <line x1="4" y1="7" x2="20" y2="7"></line>
+                      <line x1="4" y1="12" x2="20" y2="12"></line>
+                      <line x1="4" y1="17" x2="20" y2="17"></line>
+                    </svg>
+                  )}
+                </button>
+              </div>
+            </div>
+
+            {mobileMenuOpen && (
+              <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl md:hidden" onClick={() => setMobileMenuOpen(false)}>
+                <div 
+                  className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-slate-950 border-l border-white/10 p-6 flex flex-col justify-between shadow-2xl"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div>
+                    <div className="flex items-center justify-between pb-5 border-b border-white/10 mb-6">
+                      <span className="font-bold text-lg text-white">Navigation</span>
+                      <button 
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="p-1.5 rounded-lg bg-slate-900 border border-white/10 text-slate-400 hover:text-white"
+                      >
+                        <IconX size={18} />
+                      </button>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      {['home', 'vehicles', 'why-us', 'reviews', 'contact'].map(secId => {
+                        const labels = { 'home': 'Home', 'vehicles': 'Our Fleet', 'why-us': 'Why Us', 'reviews': 'Reviews', 'contact': 'Contact' };
+                        return (
+                          <button
+                            key={secId}
+                            className={`w-full text-left px-4 py-3 rounded-xl font-medium text-base transition-colors ${activeSection === secId ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 'text-slate-300 hover:bg-white/5'}`}
+                            onClick={() => { navigateTo(secId); setMobileMenuOpen(false); }}
+                          >
+                            {labels[secId]}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-3 pt-6 border-t border-white/10">
+                    <button 
+                      onClick={() => { openBooking(null); setMobileMenuOpen(false); }}
+                      className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-bold text-xs flex items-center justify-center gap-2"
+                    >
+                      <IconZap size={14} className="text-zinc-950" />
+                      <span>Instant Booking</span>
+                    </button>
+                    <a 
+                      href={`tel:${COMPANY_INFO.phone}`} 
+                      className="flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-900 border border-amber-500/30 text-white font-semibold text-sm hover:border-amber-400/50"
+                    >
+                      <IconPhone size={16} className="text-amber-400" />
+                      <span>Call {COMPANY_INFO.phoneDisplay}</span>
+                    </a>
+                    <a 
+                      href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=Hello%20Abhishek%20Travels`} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 text-white font-semibold text-sm shadow-lg shadow-emerald-600/20"
+                    >
+                      <IconMessageCircle size={16} />
+                      <span>WhatsApp Dispatch</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </header>
+
+          {/* Main Content */}
+          <main className="flex-1">
+            {/* Hero Section with Scenic Highway Road Background & Fleet Convoy Reel */}
+            <section className="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden" id="home">
+              {/* Scenic Road & Vehicle Highway Backdrop with Full Fleet Convoy */}
+              <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-95 scale-105 transform duration-1000"
+                  style={{ backgroundImage: `url('/images/fleet-road-hero.jpg')` }}
+                />
+                {/* Subtle Lighting Gradient Overlay for High Image Visibility & Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/30 via-zinc-950/20 to-zinc-950/90" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-amber-500/15 via-orange-600/10 to-transparent blur-3xl opacity-70" />
+              </div>
+
+              <div className="container-custom">
+                <div className="max-w-4xl mx-auto text-center">
+                  
+                  {/* 3D Floating Gold Pill */}
+                  <div className="inline-block mb-6 animate-float">
+                    <FloatingPill variant="gold" className="px-4 py-1.5 text-xs shadow-lg shadow-amber-500/20">
+                      <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping mr-1"></span>
+                      <IconSparkles size={13} className="text-amber-300" />
+                      <span>Gujarat's #1 Royal Chauffeur Fleet & Luxury Vans</span>
+                    </FloatingPill>
+                  </div>
+
+                  <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white mb-6 leading-[1.15] drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
+                    Journey in Supreme Luxury, <br />
+                    <span className="text-amber-300 drop-shadow-[0_4px_16px_rgba(0,0,0,1)] font-extrabold inline-block mt-1">Anywhere Across India.</span>
+                  </h1>
+
+                  <p className="text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+                    Experience royal comfort on every highway with our pristine fleet of Toyota Innovas, 
+                    VIP 20-Seater Force Urbania Maharaja vans, executive sedans, and AC sleeper coaches. 
+                    Polite verified chauffeurs, zero hidden surcharges, and 24/7 on-demand booking.
+                  </p>
+
+                  {/* 3D Glass Booking Console (Warm Amber Gold) */}
+                  <div className="relative mb-14 p-2 rounded-3xl bg-gradient-to-b from-amber-500/25 via-zinc-800/40 to-zinc-900/60 border border-amber-500/30 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] backdrop-blur-2xl">
+                    <form onSubmit={handleHeroSearch} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 p-3 rounded-2xl bg-zinc-950/85">
+                      
+                      <div className="flex flex-col text-left px-3.5 py-2.5 rounded-xl bg-zinc-900/70 border border-white/5 focus-within:border-amber-500/60 transition-colors">
+                        <label className="text-[11px] font-bold uppercase tracking-wider text-amber-400 mb-1 flex items-center gap-1.5">
+                          <IconCar size={13} className="text-amber-400" />
+                          Vehicle Category
+                        </label>
+                        <select 
+                          value={heroCategory} 
+                          onChange={(e) => setHeroCategory(e.target.value)}
+                          className="bg-transparent text-white font-medium text-sm focus:outline-none cursor-pointer"
+                        >
+                          {VEHICLE_CATEGORIES.map(cat => (
+                            <option key={cat.id} value={cat.id} className="bg-zinc-900 text-white">
+                              {cat.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div className="flex flex-col text-left px-3.5 py-2.5 rounded-xl bg-zinc-900/70 border border-white/5 focus-within:border-amber-500/60 transition-colors">
+                        <label className="text-[11px] font-bold uppercase tracking-wider text-amber-400 mb-1 flex items-center gap-1.5">
+                          <IconShield size={13} className="text-amber-400" />
+                          Trip Type
+                        </label>
+                        <select 
+                          value={heroTripType} 
+                          onChange={(e) => setHeroTripType(e.target.value)}
+                          className="bg-transparent text-white font-medium text-sm focus:outline-none cursor-pointer"
+                        >
+                          <option value="outstation" className="bg-zinc-900 text-white">Outstation Round Trip</option>
+                          <option value="local" className="bg-zinc-900 text-white">Local City Tour (8h/80km)</option>
+                          <option value="airport" className="bg-zinc-900 text-white">Airport Transfer</option>
+                          <option value="wedding" className="bg-zinc-900 text-white">Wedding & Group Tour</option>
+                        </select>
+                      </div>
+
+                      <div className="flex flex-col text-left px-3.5 py-2.5 rounded-xl bg-zinc-900/70 border border-white/5 focus-within:border-amber-500/60 transition-colors">
+                        <label className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-1">
+                          Destination / Tour
+                        </label>
+                        <input 
+                          type="text" 
+                          placeholder="e.g. Udaipur, Somnath, Mumbai..."
+                          value={heroDestination}
+                          onChange={(e) => setHeroDestination(e.target.value)}
+                          className="bg-transparent text-white placeholder-zinc-500 font-medium text-sm focus:outline-none"
+                        />
+                      </div>
+
+                      <button 
+                        type="submit" 
+                        className="btn-shimmer flex items-center justify-center gap-2 h-full min-h-[48px] rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-sm shadow-[0_4px_20px_rgba(245,158,11,0.4)] hover:shadow-[0_8px_25px_rgba(245,158,11,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all"
+                      >
+                        <span>Find Fleet</span>
+                        <IconArrowRight size={16} />
+                      </button>
+                    </form>
+                  </div>
+
+                  {/* Quick CTAs */}
+                  <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
+                    <button 
+                      onClick={() => openBooking(null)}
+                      className="btn-shimmer px-7 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-sm tracking-wide shadow-[0_10px_30px_rgba(245,158,11,0.4)] hover:shadow-[0_12px_35px_rgba(245,158,11,0.6)] hover:-translate-y-1 active:translate-y-0 transition-all flex items-center gap-2.5 border border-yellow-300/60"
+                    >
+                      <span>Get Custom Quote</span>
+                      <IconArrowRight size={16} />
+                    </button>
+
+                    <a 
+                      href={`tel:${COMPANY_INFO.phone}`} 
+                      className="px-6 py-3.5 rounded-2xl bg-zinc-900/90 hover:bg-zinc-800 border border-amber-500/25 text-white font-semibold text-sm hover:border-amber-400/50 hover:-translate-y-1 transition-all flex items-center gap-2.5 shadow-lg"
+                    >
+                      <div className="w-6 h-6 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                        <IconPhone size={13} />
+                      </div>
+                      <span>Hotline: {COMPANY_INFO.phoneDisplay}</span>
+                    </a>
+
+                    <a 
+                      href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent('Hello Abhishek Travels, I would like to check vehicle availability and rates.')}`}
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-semibold text-sm shadow-[0_8px_25px_rgba(16,185,129,0.35)] hover:-translate-y-1 transition-all flex items-center gap-2"
+                    >
+                      <IconMessageCircle size={18} />
+                      <span>WhatsApp Us</span>
+                    </a>
+                  </div>
+
+                  {/* 3D Glass Framed Fleet Showcase Banner (Road + Car Fleet) */}
+                  <div className="relative mb-14 rounded-3xl p-3 bg-gradient-to-b from-amber-500/30 via-zinc-800/40 to-zinc-900/90 border border-amber-500/35 shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl group overflow-hidden">
+                    <div className="relative rounded-2xl overflow-hidden aspect-[16/9] sm:aspect-[16/9] lg:aspect-[20/9] max-h-[460px] bg-zinc-950">
+                      <img 
+                        src="images/fleet-road-hero.jpg" 
+                        onError={(e) => { e.target.src = '/images/fleet-road-hero.jpg'; }}
+                        alt="Abhishek Travels Fleet on Highway Road" 
+                        className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent opacity-80" />
+                      
+                      <div className="absolute top-4 left-4 sm:top-5 sm:left-5 flex items-center gap-2">
+                        <div className="px-3 py-1.5 rounded-xl bg-zinc-950/80 border border-amber-500/40 text-amber-400 font-bold text-xs flex items-center gap-1.5 shadow-lg backdrop-blur-md">
+                          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                          <span>OUR FLEET ON THE ROAD</span>
+                        </div>
+                      </div>
+
+                      <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-left flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                        <div>
+                          <h3 className="text-lg sm:text-2xl font-black text-white drop-shadow-md">
+                            Pristine Vehicles Ready For Outstation & Local Dispatch
+                          </h3>
+                          <p className="text-xs sm:text-sm text-zinc-300 font-medium">
+                            Innovas • Dzires • VIP 20-Seater Maharaja Urbania • AC Sleeper Coaches
+                          </p>
+                        </div>
+                        <button
+                          onClick={() => navigateTo('vehicles')}
+                          className="px-4 py-2 rounded-xl bg-amber-500 text-zinc-950 font-black text-xs hover:bg-amber-400 transition-colors flex items-center gap-1.5 shrink-0 self-start sm:self-auto shadow-md"
+                        >
+                          <span>Select Your Car</span>
+                          <IconArrowRight size={14} />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 3D Elevated Statistics Grid */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-zinc-900/80 to-zinc-950/90 border border-white/10 backdrop-blur-xl shadow-xl hover:-translate-y-1 transition-transform group text-left">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-amber-400 transition-colors">
+                          {COMPANY_INFO.experienceYears}
+                        </span>
+                        <div className="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center">
+                          <IconAward size={16} />
+                        </div>
+                      </div>
+                      <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Years of Trust</p>
+                      <span className="text-[10px] text-amber-400 mt-1 block">Est. in Gujarat</span>
+                    </div>
+
+                    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-zinc-900/80 to-zinc-950/90 border border-white/10 backdrop-blur-xl shadow-xl hover:-translate-y-1 transition-transform group text-left">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-amber-400 transition-colors">
+                          {COMPANY_INFO.tripsCompleted}
+                        </span>
+                        <div className="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center">
+                          <IconUsers size={16} />
+                        </div>
+                      </div>
+                      <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Trips Completed</p>
+                      <span className="text-[10px] text-emerald-400 mt-1 block">Across All States</span>
+                    </div>
+
+                    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-zinc-900/80 to-zinc-950/90 border border-white/10 backdrop-blur-xl shadow-xl hover:-translate-y-1 transition-transform group text-left">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-amber-400 transition-colors">
+                          {COMPANY_INFO.fleetSize}
+                        </span>
+                        <div className="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center">
+                          <IconCar size={16} />
+                        </div>
+                      </div>
+                      <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Maintained Vehicles</p>
+                      <span className="text-[10px] text-amber-400 mt-1 block">Sedans to Buses</span>
+                    </div>
+
+                    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-zinc-900/80 to-zinc-950/90 border border-white/10 backdrop-blur-xl shadow-xl hover:-translate-y-1 transition-transform group text-left">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-2xl sm:text-3xl font-extrabold text-amber-300">
+                          4.9 ★
+                        </span>
+                        <div className="w-8 h-8 rounded-lg bg-amber-500/15 text-yellow-400 flex items-center justify-center">
+                          <IconStar size={16} fill="currentColor" />
+                        </div>
+                      </div>
+                      <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Customer Rating</p>
+                      <span className="text-[10px] text-amber-300 mt-1 block">1,450+ Verified Reviews</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+            {/* Fleet Section: Only Clicked Car Based on 5-Seater Cars */}
+            <section className="py-20 md:py-28 relative" id="vehicles">
+              <div className="container-custom">
+                
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                  <div className="inline-block mb-3">
+                    <FloatingPill variant="gold" className="px-3.5 py-1 text-xs">
+                      <IconSparkles size={12} className="text-amber-300" />
+                      <span>Chauffeur-Driven Fleet Showcase</span>
+                    </FloatingPill>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    Select & View Your Chauffeur Vehicle
+                  </h2>
+                  <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
+                    Choose a vehicle category below to view and book your preferred car. 
+                    All vehicles are deep-cleaned, air-conditioned, and driven by verified highway chauffeurs.
+                  </p>
+                </div>
+
+                {/* Category Selector Tabs (Based on 5-Seater Cars) */}
+                <div className="p-2 sm:p-2.5 rounded-2xl bg-zinc-900/85 border border-amber-500/20 backdrop-blur-xl shadow-xl mb-6 max-w-4xl mx-auto">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    {VEHICLE_CATEGORIES.map(category => {
+                      const isActive = activeCategory === category.id;
+                      const count = VEHICLES.filter(v => v.category === category.id).length;
+
+                      return (
+                        <button
+                          key={category.id}
+                          onClick={() => {
+                            setSearchQuery('');
+                            setActiveCategory(category.id);
+                            const firstCar = VEHICLES.find(v => v.category === category.id);
+                            if (firstCar) setSelectedCarId(firstCar.id);
+                          }}
+                          className={`py-3 px-3 rounded-xl text-xs font-bold transition-all duration-300 flex flex-col sm:flex-row items-center justify-center gap-1.5 ${
+                            isActive 
+                              ? 'bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black shadow-lg shadow-amber-500/25 border border-yellow-300/60 scale-[1.02]' 
+                              : 'bg-zinc-800/70 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-white/5'
+                          }`}
+                        >
+                          <span className="truncate">{category.label}</span>
+                          <span className={`text-[10px] px-1.5 py-0.2 rounded-md ${isActive ? 'bg-zinc-950/20 text-zinc-950 font-black' : 'bg-white/5 text-zinc-400'}`}>
+                            {count}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Vehicle Quick Switcher Pills for this Category */}
+                <div className="flex items-center justify-center gap-2 overflow-x-auto pb-3 mb-8 max-w-3xl mx-auto scrollbar-none px-2">
+                  {categoryVehicles.map(vehicle => {
+                    const isSelected = clickedVehicle && clickedVehicle.id === vehicle.id;
+                    return (
+                      <button
+                        key={vehicle.id}
+                        onClick={() => {
+                          setSearchQuery('');
+                          setSelectedCarId(vehicle.id);
+                        }}
+                        className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all duration-200 flex items-center gap-2 ${
+                          isSelected
+                            ? 'bg-amber-500/20 text-amber-300 border border-amber-400/60 shadow-md shadow-amber-500/10 scale-105'
+                            : 'bg-zinc-900/80 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-white/5'
+                        }`}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 opacity-80" />
+                        <span>{vehicle.name}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* ========================================================
+                    ALL CARS IN THE SELECTED CATEGORY (e.g. All 5-Seater Cars)
+                    ======================================================== */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                  {categoryVehicles.map((vehicle) => {
+                    const isSelected = selectedCarId === vehicle.id;
+                    
+                    return (
+                      <div 
+                        key={vehicle.id}
+                        id={`car-${vehicle.id}`}
+                        className={`relative rounded-3xl bg-gradient-to-b from-zinc-900/95 via-zinc-900/85 to-zinc-950/98 border p-6 sm:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-2xl transition-all duration-300 flex flex-col justify-between group ${
+                          isSelected 
+                            ? 'border-amber-400 shadow-amber-500/15 ring-2 ring-amber-400/40 scale-[1.01]' 
+                            : 'border-amber-500/20 hover:border-amber-500/40'
+                        }`}
+                      >
+                        {/* Gold Top Specular Shimmer Line */}
+                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-80" />
+
+                        <div>
+                          {/* Top Header: Badge & Seating Pill */}
+                          <div className="flex items-center justify-between gap-2 mb-3">
+                            <div className="flex items-center gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded-lg border border-amber-500/20">
+                                {vehicle.categoryLabel}
+                              </span>
+                              {vehicle.badge && (
+                                <span className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-300 bg-emerald-500/10 px-2 py-0.5 rounded-lg border border-emerald-500/20">
+                                  {vehicle.badge}
+                                </span>
+                              )}
+                            </div>
+
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-zinc-300">
+                              <IconUsers size={12} className="text-amber-400" />
+                              <span>{vehicle.capacity}</span>
+                            </span>
+                          </div>
+
+                          {/* Title & Description */}
+                          <h3 className="text-xl sm:text-2xl font-black text-white mb-2 group-hover:text-amber-300 transition-colors">
+                            {vehicle.name}
+                          </h3>
+                          <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-4 font-normal line-clamp-2">
+                            {vehicle.description}
+                          </p>
+
+                          {/* Stage with Vehicle Image */}
+                          <div className="relative w-full h-44 sm:h-48 flex items-center justify-center p-2 my-2 bg-zinc-950/40 rounded-2xl border border-white/5 overflow-hidden">
+                            <div className="absolute inset-x-6 bottom-2 h-10 bg-amber-500/15 rounded-full blur-xl animate-pulse-glow" />
+                            <img 
+                              src={vehicle.image} 
+                              alt={vehicle.name}
+                              className="relative z-10 max-h-40 max-w-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.8)] transform group-hover:scale-105 transition-transform duration-500"
+                              onError={(e) => { e.target.src = 'images/bus.png'; }}
+                            />
+                          </div>
+
+                          {/* Specifications & Comfort Chips */}
+                          <div className="mt-4 mb-5">
+                            <div className="flex flex-wrap gap-1.5">
+                              {vehicle.specs.map((spec, idx) => (
+                                <div 
+                                  key={idx} 
+                                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-zinc-800/80 border border-white/10 text-[11px] font-medium text-zinc-300"
+                                >
+                                  <IconCheck size={11} className="text-amber-400 shrink-0" />
+                                  <span>{spec}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Bottom Actions Row: Call Now, WhatsApp Inquiry, Book Vehicle */}
+                        <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                          <a
+                            href={`tel:${COMPANY_INFO.phone}`}
+                            className="py-3 px-3.5 rounded-xl bg-zinc-800/90 hover:bg-zinc-700 border border-amber-500/30 text-amber-300 font-bold text-xs flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-sm cursor-pointer shrink-0"
+                            title={`Call Abhishek Travels Dispatch for ${vehicle.name}`}
+                          >
+                            <IconPhone size={14} className="text-amber-400" />
+                            <span>Call Now</span>
+                          </a>
+
+                          <a
+                            href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent(`Hello Abhishek Travels, I want to book the ${vehicle.name}. Please check availability for my trip.`)}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="btn-shimmer flex-1 py-3 px-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 flex items-center justify-center gap-1.5 transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                          >
+                            <IconMessageCircle size={15} />
+                            <span>WhatsApp Inquiry</span>
+                          </a>
+
+                          <button
+                            onClick={() => openBooking(vehicle)}
+                            className="py-3 px-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs shadow-md shadow-amber-500/20 hover:brightness-110 flex items-center justify-center gap-1.5 transition-transform hover:scale-[1.02] active:scale-[0.98] border border-yellow-300/60 shrink-0"
+                          >
+                            <IconZap size={14} />
+                            <span>Book Vehicle</span>
+                          </button>
+                        </div>
+
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Category helper note */}
+                <div className="mt-8 text-center">
+                  <p className="text-xs text-zinc-400">
+                    Click any category tab above to explore our complete 5-seater sedans, SUVs, Urbania vans, and luxury coaches.
+                  </p>
+                </div>
+
+              </div>
+            </section>
+
+            {/* Why Choose Us */}
+            <section className="py-20 md:py-28 relative" id="why-us">
+              <div className="container-custom">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                  <div className="inline-block mb-3">
+                    <FloatingPill variant="amber" className="px-3.5 py-1 text-xs">
+                      <IconCrown size={12} className="text-yellow-400" />
+                      <span>The Abhishek Travels Guarantee</span>
+                    </FloatingPill>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    Why Thousands of Travelers Trust Us
+                  </h2>
+                  <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                    For over {COMPANY_INFO.experienceYears} years, we have been delivering unforgettable journeys 
+                    across Gujarat, Rajasthan, Maharashtra, and all over India with unmatched punctuality.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+                  {[
+                    { icon: <IconShield size={24} />, variant: 'blue', title: 'Verified & Skilled Chauffeurs', desc: '5+ years highway driving expertise, commercial licenses, police verification, and thorough local route knowledge.' },
+                    { icon: <IconSparkles size={24} />, variant: 'cyan', title: 'Deep Sanitized & Fresh Fleet', desc: 'Every car undergoes a complete wash, vacuum cleaning, and fragrance treatment prior to departure.' },
+                    { icon: <IconZap size={24} />, variant: 'amber', title: '24/7 Breakdown & Assistance', desc: 'Comprehensive nationwide support network. Quick replacement vehicle dispatched if ever required.' },
+                    { icon: <IconTag size={24} />, variant: 'emerald', title: 'Clear Upfront Quotes & No Surprises', desc: 'Clear trip quotations without unexpected hidden driver night charges or fuel surcharges.' },
+                    { icon: <IconMapPin size={24} />, variant: 'purple', title: 'All-India Commercial Permits', desc: 'All vehicles carry up-to-date commercial tourist permits, interstate tax clearance, and valid comprehensive insurance.' },
+                    { icon: <IconCrown size={24} />, variant: 'gold', title: 'Tailored Tour Itineraries', desc: 'Travel at your own pace with unlimited stops for photography, tea, food, and sightseeing.' }
+                  ].map((item, index) => (
+                    <div key={index} className="relative rounded-2xl bg-gradient-to-b from-slate-900/80 via-slate-900/90 to-slate-950/95 border border-white/10 backdrop-blur-xl shadow-xl p-7 hover:-translate-y-2 transition-transform duration-300 text-left">
+                      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+                      <div className="mb-5">
+                        <ThreeDIconTile icon={item.icon} variant={item.variant} size="md" />
+                      </div>
+                      <h3 className="text-lg font-bold text-white mb-2.5">{item.title}</h3>
+                      <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="relative rounded-3xl p-7 sm:p-9 bg-gradient-to-r from-amber-950/50 via-zinc-900/90 to-zinc-950/90 border border-amber-500/30 shadow-[0_20px_50px_rgba(245,158,11,0.2)] backdrop-blur-xl flex flex-col lg:flex-row items-center justify-between gap-6 overflow-hidden">
+                  <div className="flex items-center gap-5 relative z-10 text-left">
+                    <div className="w-14 h-14 rounded-2xl bg-amber-400/15 border border-amber-300/30 flex items-center justify-center text-amber-300 flex-shrink-0 shadow-lg">
+                      <IconCrown size={28} />
+                    </div>
+                    <div>
+                      <h4 className="text-lg sm:text-xl font-bold text-white mb-1">
+                        Planning a wedding, corporate conference, or pilgrimage?
+                      </h4>
+                      <p className="text-xs sm:text-sm text-zinc-300">
+                        We provide bulk fleet bookings (multiple Innovas, Urbania vans & luxury buses) with dedicated on-ground transport coordinators.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex-shrink-0 relative z-10 w-full lg:w-auto">
+                    <a 
+                      href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent('Hello Abhishek Travels, I need bulk fleet booking for an event.')}`} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="btn-shimmer w-full lg:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 hover:brightness-110 font-black text-xs tracking-wide shadow-xl transition-transform hover:scale-105"
+                    >
+                      <IconMessageCircle size={16} className="text-zinc-950" />
+                      <span>Inquire for Bulk Booking</span>
+                      <IconArrowRight size={14} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Reviews Section */}
+            <section className="py-20 md:py-28 relative" id="reviews">
+              <div className="container-custom">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                  <div className="inline-block mb-3">
+                    <FloatingPill variant="gold" className="px-3.5 py-1 text-xs">
+                      <IconSparkles size={12} className="text-amber-300" />
+                      <span>Real Traveler Feedback</span>
+                    </FloatingPill>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    What Travelers Say About Abhishek Travels
+                  </h2>
+                  <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
+                    Real feedback from families, corporate travelers, and pilgrims who explored India with us.
+                  </p>
+                </div>
+
+                <div className="p-6 sm:p-8 rounded-3xl bg-zinc-900/80 border border-white/10 backdrop-blur-xl shadow-2xl mb-12 flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex items-center gap-6">
+                    <div className="text-center md:text-left">
+                      <span className="text-5xl font-extrabold text-white tracking-tight">4.9</span>
+                      <div className="flex items-center justify-center md:justify-start gap-1 my-1">
+                        {renderStars(5)}
+                      </div>
+                      <span className="text-xs text-zinc-400">Based on 1,450+ verified trip ratings</span>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap items-center justify-center md:justify-end gap-3">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-zinc-200">
+                      <IconShield size={14} className="text-emerald-400" />
+                      <span>100% Verified Trips</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-zinc-200">
+                      <IconAward size={14} className="text-amber-400" />
+                      <span>98% 5-Star Reviews</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-zinc-200">
+                      <IconCheck size={14} className="text-amber-400" />
+                      <span>99.4% On-Time Pickups</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                  <div className="lg:col-span-5">
+                    <div className="p-7 rounded-2xl bg-gradient-to-b from-zinc-900/90 to-zinc-950/95 border border-white/10 backdrop-blur-xl shadow-xl sticky top-28 text-left">
+                      <h3 className="text-xl font-bold text-white mb-1">Share Your Experience</h3>
+                      <p className="text-xs text-zinc-400 mb-6">Traveled with us recently? We'd love to hear how your journey went!</p>
+
+                      {showSuccessToast && (
+                        <div className="p-3.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-semibold mb-6 flex items-center gap-2 animate-in fade-in duration-300">
+                          <IconCheck size={16} className="text-emerald-400" />
+                          <span>Thank you! Your review has been published.</span>
+                        </div>
+                      )}
+
+                      <form onSubmit={handleReviewSubmit} className="flex flex-col gap-4">
+                        <div>
+                          <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Your Full Name *</label>
+                          <input 
+                            type="text" 
+                            required
+                            placeholder="e.g. Priyank Trivedi" 
+                            value={revName}
+                            onChange={(e) => setRevName(e.target.value)}
+                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-950/80 border border-white/10 focus:border-amber-400 text-xs text-white placeholder-zinc-500 focus:outline-none transition-colors"
+                          />
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-3">
+                          <div>
+                            <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Rating</label>
+                            <select 
+                              value={revRating} 
+                              onChange={(e) => setRevRating(e.target.value)}
+                              className="w-full px-3 py-2.5 rounded-xl bg-zinc-950/80 border border-white/10 focus:border-amber-400 text-xs text-white focus:outline-none cursor-pointer"
+                            >
+                              <option value="5">5 ★ Exceptional</option>
+                              <option value="4">4 ★ Very Good</option>
+                              <option value="3">3 ★ Good</option>
+                              <option value="2">2 ★ Average</option>
+                              <option value="1">1 ★ Poor</option>
+                            </select>
+                          </div>
+
+                          <div>
+                            <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Route / Trip</label>
+                            <input 
+                              type="text" 
+                              placeholder="e.g. Ahmedabad to Diu" 
+                              value={revTrip}
+                              onChange={(e) => setRevTrip(e.target.value)}
+                              className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-950/80 border border-white/10 focus:border-amber-400 text-xs text-white placeholder-zinc-500 focus:outline-none transition-colors"
+                            />
+                          </div>
+                        </div>
+
+                        <div>
+                          <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Your Feedback *</label>
+                          <textarea 
+                            required
+                            rows="4" 
+                            placeholder="How was the vehicle condition, AC cooling, driver behavior, and trip punctuality?"
+                            value={revText}
+                            onChange={(e) => setRevText(e.target.value)}
+                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-950/80 border border-white/10 focus:border-amber-400 text-xs text-white placeholder-zinc-500 focus:outline-none transition-colors resize-none"
+                          />
+                        </div>
+
+                        <button 
+                          type="submit" 
+                          className="btn-shimmer mt-2 w-full py-3 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs tracking-wide shadow-lg shadow-amber-500/30 transition-transform hover:scale-[1.01]"
+                        >
+                          Post Review Now
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-7">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-xl font-bold text-white">Recent Customer Feedback</h3>
+                      <span className="text-xs text-zinc-400 font-semibold">{reviews.length} reviews</span>
+                    </div>
+
+                    <div className="flex flex-col gap-4 max-h-[720px] overflow-y-auto pr-2 scrollbar-none">
+                      {reviews.map((rev) => (
+                        <div 
+                          key={rev.id} 
+                          className="p-5 rounded-2xl bg-gradient-to-b from-zinc-900/90 to-zinc-950/90 border border-white/10 hover:border-amber-400/30 transition-all text-left shadow-lg hover:-translate-y-1"
+                        >
+                          <div className="flex items-center justify-between mb-3">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center text-zinc-950 font-bold text-sm shadow-md">
+                                {rev.name.charAt(0).toUpperCase()}
+                              </div>
+                              <div>
+                                <h4 className="font-bold text-sm text-white">{rev.name}</h4>
+                                <span className="text-[10px] text-zinc-400">{rev.date}</span>
+                              </div>
+                            </div>
+
+                            <div className="flex items-center gap-0.5">
+                              {renderStars(rev.rating)}
+                            </div>
+                          </div>
+
+                          {rev.trip && (
+                            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/20 text-[10px] font-semibold text-amber-300 mb-2.5">
+                              <IconMapPin size={10} />
+                              <span>{rev.trip}</span>
+                            </div>
+                          )}
+
+                          <p className="text-xs text-zinc-300 leading-relaxed italic">
+                            "{rev.text}"
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            {/* Contact Section */}
+            <section className="py-20 md:py-28 relative" id="contact">
+              <div className="container-custom">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                  <div className="inline-block mb-3">
+                    <FloatingPill variant="gold" className="px-3.5 py-1 text-xs">
+                      <IconSparkles size={12} className="text-amber-300" />
+                      <span>24/7 Helpline & Booking Desk</span>
+                    </FloatingPill>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    Book Your Ride Or Inquire 24/7
+                  </h2>
+                  <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
+                    Our dispatch managers are available round the clock to customize your travel package.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                  <div className="relative rounded-2xl bg-gradient-to-b from-zinc-900/80 via-zinc-900/90 to-zinc-950/95 border border-white/10 p-8 text-center flex flex-col items-center shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+                    <ThreeDIconTile icon={<IconPhone size={24} />} variant="gold" size="md" className="mb-5" />
+                    <h3 className="text-lg font-bold text-white mb-1.5">Direct Phone Call</h3>
+                    <p className="text-xs text-zinc-400 mb-4">Speak immediately with our booking coordinator for instant rates.</p>
+                    <a href={`tel:${COMPANY_INFO.phone}`} className="text-base font-extrabold text-amber-400 hover:text-amber-300 mb-6 block">
+                      {COMPANY_INFO.phoneDisplay}
+                    </a>
+                    <a 
+                      href={`tel:${COMPANY_INFO.phone}`} 
+                      className="mt-auto w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs hover:brightness-110 shadow-lg shadow-amber-500/20 transition-all"
+                    >
+                      Call Hotline Now
+                    </a>
+                  </div>
+
+                  <div className="relative rounded-2xl bg-gradient-to-b from-zinc-900/80 via-zinc-900/90 to-zinc-950/95 border border-white/10 p-8 text-center flex flex-col items-center shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+                    <ThreeDIconTile icon={<IconMessageCircle size={24} />} variant="emerald" size="md" className="mb-5" />
+                    <h3 className="text-lg font-bold text-white mb-1.5">WhatsApp Booking</h3>
+                    <p className="text-xs text-zinc-400 mb-4">Get instant car photos, video walk-arounds, and written quotations.</p>
+                    <a 
+                      href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent('Hello Abhishek Travels, I would like to book a vehicle.')}`} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="text-base font-extrabold text-emerald-400 hover:text-emerald-300 mb-6 block"
+                    >
+                      +91 98250 45916
+                    </a>
+                    <a 
+                      href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent('Hello Abhishek Travels, I would like to book a vehicle.')}`} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="mt-auto w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-bold text-xs transition-colors shadow-lg shadow-emerald-600/20"
+                    >
+                      Chat on WhatsApp
+                    </a>
+                  </div>
+
+                  <div className="relative rounded-2xl bg-gradient-to-b from-zinc-900/80 via-zinc-900/90 to-zinc-950/95 border border-white/10 p-8 text-center flex flex-col items-center shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+                    <ThreeDIconTile icon={<IconBuilding size={24} />} variant="amber" size="md" className="mb-5" />
+                    <h3 className="text-lg font-bold text-white mb-1.5">Office & Timings</h3>
+                    <p className="text-xs text-zinc-300 font-semibold mb-1">{COMPANY_INFO.location}</p>
+                    <p className="text-[11px] text-zinc-400 mb-4">{COMPANY_INFO.officeAddress}</p>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-semibold text-amber-300 mb-6">
+                      <IconClock size={12} />
+                      <span>{COMPANY_INFO.hours}</span>
+                    </div>
+                    <button 
+                      onClick={() => openBooking(null)} 
+                      className="mt-auto w-full py-2.5 rounded-xl bg-zinc-900 border border-amber-500/30 hover:border-amber-400 hover:bg-zinc-800 text-white font-bold text-xs transition-all"
+                    >
+                      Online Reservation Form
+                    </button>
+                  </div>
+                </div>
+
+                <div className="max-w-3xl mx-auto">
+                  <h3 className="text-2xl font-bold text-white text-center mb-8">Frequently Asked Questions</h3>
+                  <div className="flex flex-col gap-3">
+                    {[
+                      { q: "What is included in the vehicle rental charges?", a: "Our rates include the vehicle hire, fuel, and professional chauffeur service. Toll taxes, state border permits, and parking are charged at actual receipts or included in custom packages." },
+                      { q: "How early should I book the 20-Seater Force Urbania or Maharaja Tempo?", a: "Force Urbania and Maharaja 1x1 Tempo Travellers are in extremely high demand for weddings and family pilgrimages. We recommend reserving at least 3-7 days in advance." },
+                      { q: "Do you offer one-way outstation taxi drops?", a: "Yes! We offer economical one-way cab drops from Ahmedabad to Mumbai, Surat, Vadodara, Udaipur, Mount Abu, and all major cities." },
+                      { q: "Are the vehicles sanitized and safe for elderly passengers and kids?", a: "Absolutely. All our cars and vans feature deep-sanitized upholstery, functioning seatbelts, child locks, smooth air suspension, and courteous drivers." }
+                    ].map((faq, index) => {
+                      const isOpen = openFaq === index;
+                      return (
+                        <div 
+                          key={index} 
+                          className={`rounded-2xl border transition-all duration-300 overflow-hidden cursor-pointer ${isOpen ? 'bg-zinc-900/90 border-amber-500/40 shadow-xl shadow-amber-500/10' : 'bg-zinc-900/60 border-white/10 hover:border-white/20'}`}
+                          onClick={() => setOpenFaq(isOpen ? -1 : index)}
+                        >
+                          <div className="p-5 flex items-center justify-between gap-4">
+                            <span className="font-bold text-sm sm:text-base text-white text-left">{faq.q}</span>
+                            <div className={`w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center text-zinc-400 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-amber-400 bg-amber-500/15' : ''}`}>
+                              <IconChevronDown size={16} />
+                            </div>
+                          </div>
+                          {isOpen && (
+                            <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed text-left border-t border-white/5 animate-in fade-in duration-200">
+                              {faq.a}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+
+          {/* Footer */}
+          <footer className="pt-16 pb-8 bg-slate-950 border-t border-white/10 relative overflow-hidden">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-amber-500/5 blur-3xl pointer-events-none" />
+            <div className="container-custom">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-14 text-left">
+                <div className="lg:col-span-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-yellow-500 p-0.5 flex items-center justify-center shadow-lg shadow-amber-500/20">
+                      <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+                        <IconCar size={20} className="text-amber-400" />
+                      </div>
+                    </div>
+                    <span className="font-extrabold text-xl text-white tracking-tight">
+                      {COMPANY_INFO.name}
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-400 leading-relaxed mb-6 max-w-sm">
+                    Gujarat's trusted luxury transport partner providing chauffeur-driven car rentals, 
+                    Force Urbania Maharaja vans, and luxury tourist buses across India with reliable service and 24/7 assistance.
+                  </p>
+                  <div className="text-xs text-zinc-300 space-y-1.5 font-medium">
+                    <p>📍 Location: <span className="text-zinc-400">{COMPANY_INFO.location}</span></p>
+                    <p>🕒 Hours: <span className="text-zinc-400">24/7 Available (365 Days)</span></p>
+                    <p>📞 Hotline: <a href={`tel:${COMPANY_INFO.phone}`} className="text-amber-400 hover:underline font-bold">{COMPANY_INFO.phoneDisplay}</a></p>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-2">
+                  <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-amber-400 pl-2">
+                    Quick Links
+                  </h4>
+                  <ul className="space-y-2 text-xs text-zinc-400">
+                    <li><button onClick={() => navigateTo('home')} className="hover:text-amber-400 transition-colors">Home</button></li>
+                    <li><button onClick={() => navigateTo('vehicles')} className="hover:text-amber-400 transition-colors">Our Fleet</button></li>
+                    <li><button onClick={() => navigateTo('why-us')} className="hover:text-amber-400 transition-colors">Why Choose Us</button></li>
+                    <li><button onClick={() => navigateTo('reviews')} className="hover:text-amber-400 transition-colors">Client Reviews</button></li>
+                    <li><button onClick={() => navigateTo('contact')} className="hover:text-amber-400 transition-colors">Contact & FAQ</button></li>
+                  </ul>
+                </div>
+
+                <div className="lg:col-span-3">
+                  <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-amber-500 pl-2">
+                    Fleet Categories
+                  </h4>
+                  <ul className="space-y-2 text-xs text-zinc-400">
+                    {VEHICLE_CATEGORIES.map(cat => (
+                      <li key={cat.id}>
+                        <button 
+                          onClick={() => { setActiveCategory(cat.id); navigateTo('vehicles'); }}
+                          className="hover:text-amber-400 transition-colors text-left"
+                        >
+                          {cat.label}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="lg:col-span-3">
+                  <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-emerald-500 pl-2">
+                    Instant Dispatch
+                  </h4>
+                  <p className="text-xs text-zinc-400 mb-4 leading-relaxed">
+                    Need urgent airport pickup or outstation car reservation? Speak directly with our dispatch team:
+                  </p>
+                  <div className="flex flex-col gap-2.5">
+                    <a 
+                      href={`tel:${COMPANY_INFO.phone}`}
+                      className="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs flex items-center justify-center gap-2 hover:brightness-110 shadow-lg shadow-amber-500/20 transition-all"
+                    >
+                      <IconPhone size={14} />
+                      <span>Call Hotline</span>
+                    </a>
+                    <a 
+                      href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent('Hello Abhishek Travels, I would like to book a vehicle.')}`} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600 border border-emerald-500/30 text-emerald-300 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all"
+                    >
+                      <IconMessageCircle size={15} />
+                      <span>WhatsApp Quote</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>© {new Date().getFullYear()} {COMPANY_INFO.name}. All Rights Reserved.</p>
+                <div className="flex items-center gap-2 text-amber-400 font-semibold bg-white/5 px-3 py-1 rounded-full border border-white/10">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                  <span>100% Client-Side React • Production-Ready SaaS UI</span>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+          {/* Floating Action Dock */}
+          <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-auto">
+            <button 
+              onClick={() => openBooking(null)}
+              className="btn-shimmer hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs shadow-2xl shadow-amber-500/40 hover:scale-105 active:scale-95 transition-all border border-yellow-300/40"
+            >
+              <IconZap size={14} className="text-zinc-950" />
+              <span>Book Now</span>
+            </button>
+
+            <a 
+              href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent('Hello Abhishek Travels, I want to book a vehicle.')}`}
+              target="_blank" 
+              rel="noreferrer"
+              className="relative w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white flex items-center justify-center shadow-[0_8px_30px_rgba(16,185,129,0.5)] hover:scale-110 active:scale-95 transition-all group"
+              title="Chat on WhatsApp"
+            >
+              <span className="radar-ping absolute inset-0 rounded-full bg-emerald-500 pointer-events-none" />
+              <IconMessageCircle size={28} className="relative z-10 transition-transform group-hover:scale-110" />
+            </a>
+
+            <a 
+              href={`tel:${COMPANY_INFO.phone}`} 
+              className="sm:hidden w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-amber-500 text-zinc-950 flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all font-bold"
+              title="Call Directly"
+            >
+              <IconPhone size={20} />
+            </a>
+          </div>
+
+          {/* Booking Modal */}
+          {isModalOpen && (
+            <BookingModalDialog 
+              vehicle={bookingVehicle} 
+              onClose={() => setIsModalOpen(false)} 
+            />
+          )}
+
+        </div>
+      );
+    }
+
+    // --- Modal Dialog Component ---
+    function BookingModalDialog({ vehicle, onClose }) {
+      const [vId, setVId] = useState(vehicle ? vehicle.id : VEHICLES[0].id);
+      const [cName, setCName] = useState('');
+      const [cPhone, setCPhone] = useState('');
+      const [tType, setTType] = useState('Outstation Round Trip');
+      const [pCity, setPCity] = useState('Ahmedabad');
+      const [dest, setDest] = useState('');
+      const [tDate, setTDate] = useState('');
+      const [pax, setPax] = useState('4');
+      const [notes, setNotes] = useState('');
+      const [sent, setSent] = useState(false);
+
+      const curVeh = VEHICLES.find(v => v.id === vId) || VEHICLES[0];
+
+      const sendWA = (e) => {
+        e.preventDefault();
+        const msg = 
+`*NEW VEHICLE BOOKING INQUIRY - ABHISHEK TRAVELS*
+---------------------------------------
+*Vehicle:* ${curVeh.name}
+*Trip Type:* ${tType}
+*Customer Name:* ${cName || 'Guest'}
+*Contact Number:* ${cPhone || 'Not provided'}
+*Pickup Location:* ${pCity}
+*Destination:* ${dest || 'To be discussed'}
+*Travel Date:* ${tDate || 'Flexible'}
+*Passengers:* ${pax}
+${notes ? `*Special Request:* ${notes}\n` : ''}---------------------------------------
+Please confirm vehicle availability and lowest rate quotation.`;
+
+        window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+        setSent(true);
+      };
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-xl animate-in fade-in duration-200" onClick={onClose}>
+          <div 
+            className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-3xl bg-zinc-950 border border-amber-500/20 p-6 sm:p-8 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] animate-in zoom-in-95 duration-200 scrollbar-none"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+              <div>
+                <FloatingPill variant="gold" className="text-[10px] mb-1">
+                  <span>Instant Reservation</span>
+                </FloatingPill>
+                <h3 className="text-xl font-extrabold text-white">
+                  Book {curVeh?.name || 'A Vehicle'}
+                </h3>
+              </div>
+              <button 
+                onClick={onClose}
+                className="w-8 h-8 rounded-xl bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+              >
+                <IconX size={16} />
+              </button>
+            </div>
+
+            {sent ? (
+              <div className="py-8 text-center">
+                <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4 text-3xl">
+                  <IconCheck size={36} />
+                </div>
+                <h4 className="text-xl font-bold text-white mb-2">Booking Inquiry Dispatched!</h4>
+                <p className="text-xs sm:text-sm text-zinc-300 max-w-sm mx-auto mb-8 leading-relaxed">
+                  Your vehicle inquiry has been forwarded to our WhatsApp reservation desk. Our team will verify car availability and confirm with you promptly.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <a 
+                    href={`tel:${COMPANY_INFO.phone}`} 
+                    className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs flex items-center justify-center gap-2 hover:brightness-110 shadow-lg shadow-amber-500/20"
+                  >
+                    <IconPhone size={14} />
+                    <span>Need Urgent Confirmation? Call Dispatch</span>
+                  </a>
+                  <button 
+                    onClick={onClose} 
+                    className="w-full py-3 rounded-xl bg-zinc-900 border border-white/10 text-zinc-300 font-semibold text-xs hover:text-white"
+                  >
+                    Back to Fleet
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <form onSubmit={sendWA} className="flex flex-col gap-4 text-left">
+                {curVeh && (
+                  <div className="p-3.5 rounded-2xl bg-zinc-900/80 border border-white/10 flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-14 h-12 bg-zinc-950 rounded-xl p-1 flex items-center justify-center">
+                        <img 
+                          src={curVeh.image} 
+                          alt={curVeh.name} 
+                          className="max-h-full max-w-full object-contain" 
+                          onError={(e) => { e.target.src = 'images/bus.png'; }}
+                        />
+                      </div>
+                      <div>
+                        <span className="text-xs font-bold text-white block">{curVeh.name}</span>
+                        <span className="text-[11px] text-amber-400">{curVeh.capacity}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div>
+                  <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Select Vehicle</label>
+                  <select 
+                    value={vId} 
+                    onChange={(e) => setVId(e.target.value)}
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/10 focus:border-amber-400 text-xs text-white focus:outline-none cursor-pointer"
+                  >
+                    {VEHICLES.map(v => (
+                      <option key={v.id} value={v.id} className="bg-zinc-950 text-white">
+                        {v.name} ({v.capacity})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Your Full Name *</label>
+                    <input 
+                      type="text" 
+                      required
+                      placeholder="e.g. Ramesh Patel" 
+                      value={cName}
+                      onChange={(e) => setCName(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/10 focus:border-amber-400 text-xs text-white placeholder-zinc-500 focus:outline-none transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Mobile Number *</label>
+                    <input 
+                      type="tel" 
+                      required
+                      placeholder="e.g. 98250 45916" 
+                      value={cPhone}
+                      onChange={(e) => setCPhone(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/10 focus:border-amber-400 text-xs text-white placeholder-zinc-500 focus:outline-none transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Trip Type</label>
+                    <select 
+                      value={tType} 
+                      onChange={(e) => setTType(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/10 focus:border-amber-400 text-xs text-white focus:outline-none cursor-pointer"
+                    >
+                      <option value="Outstation Round Trip">Outstation Round Trip</option>
+                      <option value="One Way Drop">One Way Drop</option>
+                      <option value="Local Tour (8hr/80km)">Local Tour (8hr/80km)</option>
+                      <option value="Airport Pickup / Drop">Airport Pickup / Drop</option>
+                      <option value="Wedding / Corporate Bulk">Wedding / Corporate Bulk</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Pickup Date</label>
+                    <input 
+                      type="date" 
+                      value={tDate}
+                      onChange={(e) => setTDate(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/10 focus:border-amber-400 text-xs text-white focus:outline-none"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Pickup City</label>
+                    <input 
+                      type="text" 
+                      placeholder="e.g. Ahmedabad, Airport" 
+                      value={pCity}
+                      onChange={(e) => setPCity(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/10 focus:border-amber-400 text-xs text-white placeholder-zinc-500 focus:outline-none transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Destination / Tour</label>
+                    <input 
+                      type="text" 
+                      placeholder="e.g. Somnath, Udaipur" 
+                      value={dest}
+                      onChange={(e) => setDest(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/10 focus:border-amber-400 text-xs text-white placeholder-zinc-500 focus:outline-none transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="text-xs font-bold text-zinc-300 mb-1.5 block">Special Requests (Optional)</label>
+                  <textarea 
+                    rows="2" 
+                    placeholder="Luggage requirements, child seats, specific route preferences..." 
+                    value={notes} 
+                    onChange={(e) => setNotes(e.target.value)} 
+                    className="w-full px-3.5 py-2 rounded-xl bg-zinc-900 border border-white/10 focus:border-amber-400 text-xs text-white placeholder-zinc-500 focus:outline-none transition-colors resize-none"
+                  />
+                </div>
+
+                <div className="mt-2 flex flex-col gap-3">
+                  <button 
+                    type="submit" 
+                    className="btn-shimmer w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-bold text-xs tracking-wide shadow-xl shadow-emerald-600/30 flex items-center justify-center gap-2 transition-transform hover:scale-[1.01]"
+                  >
+                    <IconMessageCircle size={18} />
+                    <span>Send Booking Request on WhatsApp</span>
+                  </button>
+
+                  <div className="text-center text-xs text-zinc-400">
+                    Or call directly: <a href={`tel:${COMPANY_INFO.phone}`} className="text-amber-400 font-bold hover:underline">{COMPANY_INFO.phoneDisplay}</a>
+                  </div>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    // Mount to DOM fallback (only if Vite module didn't mount)
+    setTimeout(() => {
+      const rootEl = document.getElementById('root');
+      if (rootEl && !window.__VITE_REACT_MOUNTED__) {
+        const root = ReactDOM.createRoot(rootEl);
+        root.render(<App />);
+      }
+    }, 100);
+  </script>
+</body>
+</html>

@@ -32,15 +32,15 @@ export default function ContactSection({ onOpenBookingModal }) {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block mb-3">
-            <FloatingPill variant="gold" className="px-3.5 py-1 text-xs">
-              <IconSparkles size={12} className="text-amber-300" />
-              <span>24/7 Helpline & Booking Desk</span>
+            <FloatingPill variant="navy" className="px-3.5 py-1 text-xs">
+              <IconSparkles size={12} className="text-[#1E3A5F]" />
+              <span className="font-bold text-[#1E3A5F]">24/7 Helpline & Booking Desk</span>
             </FloatingPill>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             Book Your Ride Or Inquire 24/7
           </h2>
-          <p className="text-sm sm:text-base text-zinc-200 leading-relaxed font-normal bg-zinc-950/60 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+          <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal bg-[#0F172A]/80 p-4 rounded-2xl border border-[#1E3A5F]/40 backdrop-blur-md">
             Our dispatch managers are available round the clock to customize your travel package.
           </p>
         </div>
@@ -49,26 +49,41 @@ export default function ContactSection({ onOpenBookingModal }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           
           {/* Card 1: Direct Call */}
-          <ThreeDCard className="p-8 text-center flex flex-col items-center" glow="gold">
-            <ThreeDIconTile icon={<IconPhone size={24} />} variant="gold" size="md" className="mb-5" />
+          <ThreeDCard className="p-8 text-center flex flex-col items-center" glow="navy">
+            <ThreeDIconTile icon={<IconPhone size={24} />} variant="navy" size="md" className="mb-5" />
             <h3 className="text-lg font-bold text-white mb-1.5">Direct Phone Call</h3>
-            <p className="text-xs text-zinc-200 mb-4 font-normal">Speak immediately with our booking coordinator for instant rates.</p>
-            <a href={`tel:${COMPANY_INFO.phone}`} className="text-base font-black text-amber-400 hover:text-amber-300 mb-6 block">
-              {COMPANY_INFO.phoneDisplay}
-            </a>
-            <a 
-              href={`tel:${COMPANY_INFO.phone}`} 
-              className="mt-auto w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs transition-colors shadow-lg shadow-amber-500/20"
-            >
-              Call Hotline Now
-            </a>
+            <p className="text-xs text-slate-200 mb-4 font-normal">Speak immediately with our booking coordinator for instant rates.</p>
+            <div className="space-y-1.5 mb-6">
+              <a href={`tel:${COMPANY_INFO.phone}`} className="text-base font-black text-white hover:text-[#93C5FD] block">
+                {COMPANY_INFO.phoneDisplay}
+              </a>
+              <a href={`tel:${COMPANY_INFO.phone2}`} className="text-base font-black text-white hover:text-[#93C5FD] block">
+                {COMPANY_INFO.phone2Display}
+              </a>
+            </div>
+            <div className="mt-auto w-full grid grid-cols-2 gap-2">
+              <a 
+                href={`tel:${COMPANY_INFO.phone}`} 
+                className="py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold text-xs transition-colors shadow-lg shadow-[#2563EB]/40 border border-white/20 flex items-center justify-center gap-1"
+                title="Call 98250 45916"
+              >
+                <IconPhone size={11} /> Call 1
+              </a>
+              <a 
+                href={`tel:${COMPANY_INFO.phone2}`} 
+                className="py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold text-xs transition-colors shadow-lg shadow-[#2563EB]/40 border border-white/20 flex items-center justify-center gap-1"
+                title="Call 97272 45916"
+              >
+                <IconPhone size={11} /> Call 2
+              </a>
+            </div>
           </ThreeDCard>
 
           {/* Card 2: WhatsApp */}
           <ThreeDCard className="p-8 text-center flex flex-col items-center" glow="emerald">
             <ThreeDIconTile icon={<IconMessageCircle size={24} />} variant="emerald" size="md" className="mb-5" />
             <h3 className="text-lg font-bold text-white mb-1.5">WhatsApp Booking</h3>
-            <p className="text-xs text-zinc-400 mb-4">Get instant car photos, video walk-arounds, and written quotations.</p>
+            <p className="text-xs text-slate-300 mb-4">Get instant car photos, video walk-arounds, and written quotations.</p>
             <a 
               href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent('Hello Abhishek Travels, I would like to book a vehicle.')}`} 
               target="_blank" 
@@ -88,18 +103,18 @@ export default function ContactSection({ onOpenBookingModal }) {
           </ThreeDCard>
 
           {/* Card 3: Office & Timings */}
-          <ThreeDCard className="p-8 text-center flex flex-col items-center" glow="amber">
-            <ThreeDIconTile icon={<IconBuilding size={24} />} variant="amber" size="md" className="mb-5" />
+          <ThreeDCard className="p-8 text-center flex flex-col items-center" glow="blue">
+            <ThreeDIconTile icon={<IconBuilding size={24} />} variant="darkNavy" size="md" className="mb-5" />
             <h3 className="text-lg font-bold text-white mb-1.5">Office & Timings</h3>
-            <p className="text-xs text-zinc-200 font-semibold mb-1">{COMPANY_INFO.location}</p>
-            <p className="text-[11px] text-zinc-400 mb-4">{COMPANY_INFO.officeAddress}</p>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-[11px] font-semibold text-amber-300 mb-6">
+            <p className="text-xs text-slate-200 font-semibold mb-1">{COMPANY_INFO.location}</p>
+            <p className="text-[11px] text-slate-300 mb-4">{COMPANY_INFO.officeAddress}</p>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1E3A5F]/20 border border-[#1E3A5F]/40 text-[11px] font-semibold text-[#93C5FD] mb-6">
               <IconClock size={12} />
               <span>{COMPANY_INFO.hours}</span>
             </div>
             <button 
               onClick={() => onOpenBookingModal(null)} 
-              className="mt-auto w-full py-2.5 rounded-xl bg-zinc-900 border border-amber-500/30 hover:border-amber-400 hover:bg-zinc-800 text-amber-300 font-bold text-xs transition-all"
+              className="mt-auto w-full py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold text-xs shadow-md shadow-[#2563EB]/35 transition-all border border-white/20"
             >
               Online Reservation Form
             </button>
@@ -119,20 +134,20 @@ export default function ContactSection({ onOpenBookingModal }) {
               return (
                 <div 
                   key={index} 
-                  className={`rounded-2xl border transition-all duration-300 overflow-hidden cursor-pointer ${isOpen ? 'bg-zinc-900/90 border-amber-500/40 shadow-xl shadow-amber-500/10' : 'bg-zinc-900/60 border-white/10 hover:border-white/20'}`}
+                  className={`rounded-2xl border transition-all duration-300 overflow-hidden cursor-pointer ${isOpen ? 'bg-[#0F172A]/95 border-[#1E3A5F] shadow-xl shadow-[#1E3A5F]/15' : 'bg-[#0F172A]/70 border-white/10 hover:border-[#1E3A5F]/40'}`}
                   onClick={() => setOpenFaq(isOpen ? -1 : index)}
                 >
                   <div className="p-5 flex items-center justify-between gap-4">
                     <span className="font-bold text-sm sm:text-base text-white text-left">
                       {faq.q}
                     </span>
-                    <div className={`w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center text-zinc-400 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-amber-400 bg-amber-500/15' : ''}`}>
+                    <div className={`w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-white bg-[#1E3A5F]' : ''}`}>
                       <IconChevronDown size={16} />
                     </div>
                   </div>
 
                   {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed text-left border-t border-white/5 animate-in fade-in duration-200">
+                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed text-left border-t border-white/5 animate-in fade-in duration-200">
                       {faq.a}
                     </div>
                   )}

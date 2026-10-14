@@ -134,14 +134,14 @@
   );
 
   // --- 3D UI Primitives ---
-  const ThreeDIconTile = ({ icon, variant = 'blue', size = 'md', className = '' }) => {
+  const ThreeDIconTile = ({ icon, variant = 'navy', size = 'md', className = '' }) => {
     const variantStyles = {
+      navy: 'from-[#1E3A5F] via-[#2A4D77] to-[#0F172A] border-white/20 text-white shadow-[0_8px_24px_-6px_rgba(30,58,95,0.4)]',
+      lightBlue: 'from-[#E8F0F7] via-[#DCE8F3] to-[#C5D8EA] border-[#1E3A5F]/25 text-[#1E3A5F] shadow-[0_8px_20px_-6px_rgba(30,58,95,0.2)]',
       blue: 'from-blue-600/40 via-blue-500/20 to-indigo-600/30 border-blue-400/40 text-blue-400 shadow-[0_8px_20px_-6px_rgba(37,99,235,0.5)]',
       emerald: 'from-emerald-600/40 via-teal-500/20 to-green-600/30 border-emerald-400/40 text-emerald-400 shadow-[0_8px_20px_-6px_rgba(16,185,129,0.5)]',
-      amber: 'from-amber-600/40 via-yellow-500/20 to-orange-600/30 border-amber-400/40 text-amber-400 shadow-[0_8px_20px_-6px_rgba(245,158,11,0.5)]',
       purple: 'from-purple-600/40 via-indigo-500/20 to-pink-600/30 border-purple-400/40 text-purple-400 shadow-[0_8px_20px_-6px_rgba(168,85,247,0.5)]',
-      cyan: 'from-cyan-600/40 via-sky-500/20 to-blue-600/30 border-cyan-400/40 text-cyan-400 shadow-[0_8px_20px_-6px_rgba(6,182,212,0.5)]',
-      gold: 'from-amber-500/50 via-yellow-400/30 to-amber-600/40 border-yellow-300/60 text-yellow-300 shadow-[0_8px_24px_-6px_rgba(234,179,8,0.6)]'
+      cyan: 'from-cyan-600/40 via-sky-500/20 to-blue-600/30 border-cyan-400/40 text-cyan-400 shadow-[0_8px_20px_-6px_rgba(6,182,212,0.5)]'
     };
     const sizeStyles = {
       sm: 'w-10 h-10 rounded-xl text-lg',
@@ -150,7 +150,7 @@
     };
 
     return (
-      <div className={`relative group/icon inline-flex items-center justify-center bg-gradient-to-br ${variantStyles[variant] || variantStyles.blue} ${sizeStyles[size] || sizeStyles.md} border backdrop-blur-md transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-2xl ${className}`}>
+      <div className={`relative group/icon inline-flex items-center justify-center bg-gradient-to-br ${variantStyles[variant] || variantStyles.navy} ${sizeStyles[size] || sizeStyles.md} border backdrop-blur-md transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-2xl ${className}`}>
         <div className="absolute inset-x-0 top-0 h-[30%] bg-gradient-to-b from-white/30 to-transparent rounded-t-[inherit] pointer-events-none" />
         <div className="relative z-10 flex items-center justify-center transition-transform duration-300 group-hover/icon:scale-110">
           {icon}
@@ -159,17 +159,18 @@
     );
   };
 
-  const FloatingPill = ({ children, className = '', variant = 'blue' }) => {
+  const FloatingPill = ({ children, className = '', variant = 'navy' }) => {
     const pillVariants = {
+      navy: 'bg-[#E8F0F7] border-[#C5D8EA] text-[#1E3A5F] shadow-sm',
+      lightBlue: 'bg-[#E8F0F7] border-[#C5D8EA] text-[#1E3A5F] shadow-sm',
       blue: 'bg-blue-500/15 border-blue-400/30 text-blue-300 shadow-[0_4px_16px_-4px_rgba(59,130,246,0.3)]',
       emerald: 'bg-emerald-500/15 border-emerald-400/30 text-emerald-300 shadow-[0_4px_16px_-4px_rgba(16,185,129,0.3)]',
-      amber: 'bg-amber-500/15 border-amber-400/30 text-amber-300 shadow-[0_4px_16px_-4px_rgba(245,158,11,0.3)]',
       purple: 'bg-purple-500/15 border-purple-400/30 text-purple-300 shadow-[0_4px_16px_-4px_rgba(168,85,247,0.3)]',
       cyan: 'bg-cyan-500/15 border-cyan-400/30 text-cyan-300 shadow-[0_4px_16px_-4px_rgba(6,182,212,0.3)]'
     };
 
     return (
-      <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide border backdrop-blur-md transition-all duration-300 ${pillVariants[variant] || pillVariants.blue} ${className}`}>
+      <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide border backdrop-blur-md transition-all duration-300 ${pillVariants[variant] || pillVariants.navy} ${className}`}>
         {children}
       </span>
     );
@@ -181,6 +182,9 @@
     tagline: 'Premium Car Rental & Chauffeur Services Across India',
     phone: '+919825045916',
     phoneDisplay: '+91 98250 45916',
+    phone2: '+919727245916',
+    phone2Display: '+91 97272 45916',
+    phonesDisplay: '+91 98250 45916 / +91 97272 45916',
     whatsappNumber: '919825045916',
     location: 'Ahmedabad, Gujarat, India',
     officeAddress: 'Abhishek Travels, Near SG Highway, Ahmedabad, Gujarat - 380054',
@@ -305,7 +309,7 @@
       category: 'tempo',
       categoryLabel: '20-Seater Maharaja Luxury',
       capacity: '17 to 20 Passengers',
-      image: 'images/tempo-20.png',
+      image: 'images/urbania.png',
       badge: 'VIP Presidential Suite',
       description: 'International styling with 1x1 / 2x1 Maharaja plush recliner bucket seats, individual aircraft-style AC vents, panoramic sealed windows, and LED ambient cabin lighting.',
       specs: ['Maharaja 1x1 Recliners', 'Individual AC Vents', 'Ambient RGB Lighting', 'LED TV & Hi-Fi Audio', 'Air Suspension']
@@ -316,42 +320,42 @@
       category: 'tempo',
       categoryLabel: '20-Seater Executive Van',
       capacity: '20 + 1 Passengers',
-      image: 'images/tempo-17.png',
+      image: 'images/urbania.png',
       badge: 'Corporate & Wedding Favorite',
       description: 'Next-generation executive van with high headroom, individual reading lights, ergonomic high-back pushback seats, and expansive luggage bay.',
       specs: ['Pushback Seats', 'Dual High-Capacity AC', 'Full Stand-Up Height', 'USB at Every Seat']
     },
     {
       id: 'tempo-12-maharaja',
-      name: '12-Seater Maharaja Tempo Traveller',
+      name: 'Force Urbania (12-Seater Maharaja Luxury)',
       category: 'tempo',
-      categoryLabel: '12-Seater 1x1 Maharaja',
+      categoryLabel: '12-Seater 1x1 Maharaja Urbania',
       capacity: '12 + 1 Passengers',
-      image: 'images/tempo-12.png',
+      image: 'images/urbania.png',
       badge: '1x1 Maharaja Recliners',
-      description: 'Custom-built luxury traveller with 1x1 wide Maharaja sofa seats, generous walkway, charging sockets on every seat, and premium audio setup.',
+      description: 'Custom-built Force Urbania luxury van with 1x1 wide Maharaja sofa seats, generous walkway, charging sockets on every seat, and premium audio setup.',
       specs: ['1x1 Sofa Recliner Seats', 'Direct & Indirect Mood Lighting', 'High Cooling Dual AC', 'Mic & Audio System']
     },
     {
       id: 'tempo-9',
-      name: '9-Seater Luxury Tempo Traveller',
+      name: 'Force Urbania (9-Seater VIP Executive)',
       category: 'tempo',
-      categoryLabel: '9-Seater VIP Executive',
+      categoryLabel: '9-Seater VIP Executive Urbania',
       capacity: '9 + 1 Passengers',
-      image: 'images/tempo-9.png',
+      image: 'images/urbania.png',
       badge: 'VIP Small Group',
-      description: 'Exclusive 9-seater luxury cabin with captain sofa chairs, ample legroom for tall passengers, and smooth highway handling.',
+      description: 'Exclusive 9-seater Force Urbania luxury cabin with captain sofa chairs, ample legroom for tall passengers, and smooth highway handling.',
       specs: ['Captain Sofa Seats', 'Powerful AC', 'Smart Android TV', 'Big Luggage Space']
     },
     {
       id: 'tempo-15-17',
-      name: '15 / 17 Seater Tempo Traveller',
+      name: 'Force Urbania (17-Seater Luxury Tourer)',
       category: 'tempo',
-      categoryLabel: '17-Seater Group Tourer',
+      categoryLabel: '17-Seater Group Tourer Urbania',
       capacity: '15-17 Passengers',
-      image: 'images/tempo-15.png',
+      image: 'images/urbania.png',
       badge: 'Family Tour Specialist',
-      description: 'The most popular choice for family pilgrimages to Somnath, Dwarka, Statue of Unity, and Rajasthan tours. Dependable, comfortable, and roomy.',
+      description: 'Next-generation Force Urbania coach for family pilgrimages to Somnath, Dwarka, Statue of Unity, and Rajasthan tours. Dependable, comfortable, and roomy.',
       specs: ['2x1 Pushback Seats', 'Front & Rear AC', 'Roof Luggage Carrier', 'Music & Video Screen']
     },
     {

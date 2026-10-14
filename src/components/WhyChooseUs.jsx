@@ -7,19 +7,19 @@ export default function WhyChooseUs() {
   const highlights = [
     {
       icon: <IconShield size={24} />,
-      variant: 'gold',
+      variant: 'navy',
       title: 'Verified & Skilled Chauffeurs',
       desc: 'All our drivers have 5+ years of highway driving expertise, commercial licenses, police verification, and thorough local route knowledge.'
     },
     {
       icon: <IconSparkles size={24} />,
-      variant: 'amber',
+      variant: 'lightBlue',
       title: 'Deep Sanitized & Fresh Fleet',
       desc: 'Every car undergoes a complete wash, vacuum cleaning, and fragrance treatment prior to departure. Chilled AC on guaranteed.'
     },
     {
       icon: <IconZap size={24} />,
-      variant: 'orange',
+      variant: 'darkNavy',
       title: '24/7 Breakdown & Assistance',
       desc: 'Comprehensive nationwide support network. In the rare event of mechanical issues, a quick replacement vehicle is dispatched immediately.'
     },
@@ -31,13 +31,13 @@ export default function WhyChooseUs() {
     },
     {
       icon: <IconMapPin size={24} />,
-      variant: 'purple',
+      variant: 'blue',
       title: 'All-India Commercial Permits',
       desc: 'All vehicles carry up-to-date commercial tourist permits, interstate tax clearance, and valid comprehensive insurance for smooth travel across states.'
     },
     {
       icon: <IconCrown size={24} />,
-      variant: 'gold',
+      variant: 'navy',
       title: 'Tailored Tour Itineraries',
       desc: 'Travel at your own pace with unlimited stops for photography, tea, food, and sightseeing without rigid schedules.'
     }
@@ -50,15 +50,15 @@ export default function WhyChooseUs() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block mb-3">
-            <FloatingPill variant="gold" className="px-3.5 py-1 text-xs">
-              <IconCrown size={12} className="text-amber-300" />
-              <span>The Abhishek Travels Guarantee</span>
+            <FloatingPill variant="navy" className="px-3.5 py-1 text-xs">
+              <IconCrown size={12} className="text-[#1E3A5F]" />
+              <span className="font-bold text-[#1E3A5F]">The Abhishek Travels Guarantee</span>
             </FloatingPill>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             Why Thousands of Travelers Trust Us
           </h2>
-          <p className="text-sm sm:text-base text-zinc-200 leading-relaxed font-normal bg-zinc-950/60 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+          <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal bg-[#0F172A]/80 p-4 rounded-2xl border border-[#1E3A5F]/40 backdrop-blur-md">
             For over {COMPANY_INFO.experienceYears} years, we have been delivering unforgettable journeys 
             across Gujarat, Rajasthan, Maharashtra, and all over India with unmatched punctuality.
           </p>
@@ -78,7 +78,7 @@ export default function WhyChooseUs() {
               <h3 className="text-lg font-bold text-white mb-2.5">
                 {item.title}
               </h3>
-              <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
                 {item.desc}
               </p>
             </ThreeDCard>
@@ -86,16 +86,16 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bulk Event Trust Banner */}
-        <div className="relative rounded-3xl p-7 sm:p-9 bg-gradient-to-r from-amber-950/80 via-zinc-900/90 to-zinc-950/95 border border-amber-500/35 shadow-[0_20px_50px_rgba(245,158,11,0.2)] backdrop-blur-xl flex flex-col lg:flex-row items-center justify-between gap-6 overflow-hidden">
+        <div className="relative rounded-3xl p-7 sm:p-9 bg-gradient-to-r from-[#0F172A]/95 via-[#1E3A5F]/40 to-[#0F172A]/95 border border-[#1E3A5F]/50 shadow-[0_20px_50px_rgba(15,23,42,0.8)] backdrop-blur-xl flex flex-col lg:flex-row items-center justify-between gap-6 overflow-hidden">
           <div className="flex items-center gap-5 relative z-10 text-left">
-            <div className="w-14 h-14 rounded-2xl bg-amber-400/20 border border-amber-300/40 flex items-center justify-center text-amber-300 flex-shrink-0 shadow-lg">
+            <div className="w-14 h-14 rounded-2xl bg-[#1E3A5F]/30 border border-[#1E3A5F]/50 flex items-center justify-center text-[#93C5FD] flex-shrink-0 shadow-lg">
               <IconCrown size={28} />
             </div>
             <div>
               <h4 className="text-lg sm:text-xl font-bold text-white mb-1">
                 Planning a wedding, corporate conference, or pilgrimage?
               </h4>
-              <p className="text-xs sm:text-sm text-zinc-300">
+              <p className="text-xs sm:text-sm text-slate-300">
                 We provide bulk fleet bookings (multiple Innovas, Urbania vans & luxury buses) with dedicated on-ground transport coordinators.
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function WhyChooseUs() {
               href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent('Hello Abhishek Travels, I need bulk fleet booking for an event.')}`} 
               target="_blank" 
               rel="noreferrer" 
-              className="btn-shimmer w-full lg:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs tracking-wide shadow-xl transition-transform hover:scale-105"
+              className="btn-shimmer w-full lg:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold text-xs tracking-wide shadow-xl shadow-[#2563EB]/35 transition-transform hover:scale-105 border border-white/20"
             >
               <IconMessageCircle size={16} />
               <span>Inquire for Bulk Booking</span>

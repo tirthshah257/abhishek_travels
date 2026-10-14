@@ -24,19 +24,19 @@ export default function FloatingWidget({ onOpenBookingModal }) {
       {showScrollTop && (
         <button 
           onClick={scrollToTop}
-          className="w-10 h-10 rounded-full bg-slate-900/90 border border-white/20 text-white flex items-center justify-center shadow-xl hover:bg-slate-800 hover:scale-110 active:scale-95 transition-all text-sm font-bold backdrop-blur-md"
+          className="w-10 h-10 rounded-full bg-[#0F172A]/90 border border-[#1E3A5F]/50 text-white flex items-center justify-center shadow-xl hover:bg-[#1E3A5F] hover:scale-110 active:scale-95 transition-all text-sm font-bold backdrop-blur-md"
           title="Scroll to Top"
         >
           ↑
         </button>
       )}
 
-      {/* Floating Instant Book Action */}
+      {/* Floating Instant Book Action - Sleeker, Less Dominant with Vibrant Blue */}
       <button 
         onClick={() => onOpenBookingModal(null)}
-        className="btn-shimmer hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs shadow-2xl shadow-amber-500/40 hover:scale-105 active:scale-95 transition-all border border-amber-300/40"
+        className="btn-shimmer hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold text-[11px] shadow-lg shadow-[#2563EB]/40 hover:scale-105 active:scale-95 transition-all border border-white/20 backdrop-blur-sm"
       >
-        <IconZap size={14} className="text-zinc-950" />
+        <IconZap size={12} className="text-[#93C5FD]" />
         <span>Book Now</span>
       </button>
 
@@ -44,7 +44,7 @@ export default function FloatingWidget({ onOpenBookingModal }) {
       <a 
         href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent('Hello Abhishek Travels, I want to book a vehicle.')}`}
         target="_blank" 
-        rel="noreferrer"
+        rel="noreferrer" 
         className="relative w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white flex items-center justify-center shadow-[0_8px_30px_rgba(16,185,129,0.5)] hover:scale-110 active:scale-95 transition-all group"
         title="Chat on WhatsApp"
       >
@@ -56,7 +56,7 @@ export default function FloatingWidget({ onOpenBookingModal }) {
       {/* Direct Call Button (Mobile) */}
       <a 
         href={`tel:${COMPANY_INFO.phone}`} 
-        className="sm:hidden w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-amber-500 text-zinc-950 flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all font-bold"
+        className="sm:hidden w-12 h-12 rounded-full bg-[#2563EB] text-white border border-white/20 flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all font-bold"
         title="Call Directly"
       >
         <IconPhone size={20} />

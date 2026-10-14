@@ -91,22 +91,22 @@ export default function VehiclesSection({
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-block mb-3">
-            <FloatingPill variant="gold" className="px-3.5 py-1 text-xs">
-              <IconSparkles size={12} className="text-amber-300" />
-              <span>Chauffeur-Driven Fleet Showcase</span>
+            <FloatingPill variant="navy" className="px-3.5 py-1 text-xs">
+              <IconSparkles size={12} className="text-[#1E3A5F]" />
+              <span className="font-bold text-[#1E3A5F]">Chauffeur-Driven Fleet Showcase</span>
             </FloatingPill>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             Select & View Your Chauffeur Vehicle
           </h2>
-          <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
             Choose a vehicle category below to view and book your preferred car. 
             All vehicles are deep-cleaned, air-conditioned, and driven by verified highway chauffeurs.
           </p>
         </div>
 
         {/* Category Selector Tabs (Based on 5-Seater Cars) */}
-        <div className="p-2 sm:p-2.5 rounded-2xl bg-zinc-900/85 border border-amber-500/20 backdrop-blur-xl shadow-xl mb-6 max-w-4xl mx-auto">
+        <div className="p-2 sm:p-2.5 rounded-2xl bg-[#0F172A]/90 border border-[#1E3A5F]/40 backdrop-blur-xl shadow-xl mb-6 max-w-4xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {VEHICLE_CATEGORIES.map(category => {
               const isActive = currentCategory === category.id;
@@ -118,12 +118,12 @@ export default function VehiclesSection({
                   onClick={() => handleCategorySwitch(category.id)}
                   className={`py-3 px-3 rounded-xl text-xs font-bold transition-all duration-300 flex flex-col sm:flex-row items-center justify-center gap-1.5 ${
                     isActive 
-                      ? 'bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 shadow-lg shadow-amber-500/25 border border-yellow-300/60 scale-[1.02]' 
-                      : 'bg-zinc-800/70 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-white/5'
+                      ? 'bg-[#2563EB] text-white shadow-lg shadow-[#2563EB]/35 border border-white/20 scale-[1.02]' 
+                      : 'bg-[#0F172A]/80 text-slate-400 hover:text-white hover:bg-[#1E3A5F]/20 border border-white/5'
                   }`}
                 >
                   <span className="truncate">{category.label}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-md ${isActive ? 'bg-zinc-950/20 text-zinc-950 font-black' : 'bg-white/5 text-zinc-400'}`}>
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-md ${isActive ? 'bg-white/20 text-white font-black' : 'bg-white/5 text-slate-400'}`}>
                     {count}
                   </span>
                 </button>
@@ -142,11 +142,11 @@ export default function VehiclesSection({
                 onClick={() => handleCarClick(vehicle.id)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all duration-200 flex items-center gap-2 ${
                   isSelected
-                    ? 'bg-amber-500/20 text-amber-300 border border-amber-400/60 shadow-md shadow-amber-500/10 scale-105'
-                    : 'bg-zinc-900/80 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-white/5'
+                    ? 'bg-[#2563EB] text-white border border-[#60A5FA] shadow-md shadow-[#2563EB]/30 scale-105'
+                    : 'bg-[#0F172A]/80 text-slate-400 hover:text-white hover:bg-[#1E3A5F]/20 border border-white/5'
                 }`}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 opacity-80" />
+                <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-[#60A5FA]' : 'bg-slate-500'}`} />
                 <span>{vehicle.name}</span>
               </button>
             );
@@ -164,20 +164,20 @@ export default function VehiclesSection({
               <div 
                 key={vehicle.id}
                 id={`car-${vehicle.id}`}
-                className={`relative rounded-3xl bg-gradient-to-b from-zinc-900/95 via-zinc-900/85 to-zinc-950/98 border p-6 sm:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-2xl transition-all duration-300 flex flex-col justify-between group ${
+                className={`relative rounded-3xl bg-gradient-to-b from-[#0F172A]/95 via-[#0F172A]/85 to-[#0F172A]/98 border p-6 sm:p-7 shadow-[0_20px_50px_rgba(15,23,42,0.8)] backdrop-blur-2xl transition-all duration-300 flex flex-col justify-between group ${
                   isSelected 
-                    ? 'border-amber-400 shadow-amber-500/15 ring-2 ring-amber-400/40 scale-[1.01]' 
-                    : 'border-amber-500/20 hover:border-amber-500/40'
+                    ? 'border-[#1E3A5F] shadow-[#1E3A5F]/25 ring-2 ring-[#1E3A5F]/60 scale-[1.01]' 
+                    : 'border-[#1E3A5F]/30 hover:border-[#1E3A5F]/60'
                 }`}
               >
-                {/* Gold Top Specular Shimmer Line */}
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-80" />
+                {/* Top Specular Shimmer Line */}
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#1E3A5F] to-transparent opacity-80" />
 
                 <div>
                   {/* Top Header: Badge & Seating Pill */}
                   <div className="flex items-center justify-between gap-2 mb-3">
                     <div className="flex items-center gap-2">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded-lg border border-amber-500/20">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#E8F0F7] bg-[#1E3A5F]/30 px-2.5 py-0.5 rounded-lg border border-[#1E3A5F]/40">
                         {vehicle.categoryLabel}
                       </span>
                       {vehicle.badge && (
@@ -187,23 +187,23 @@ export default function VehiclesSection({
                       )}
                     </div>
 
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-zinc-300">
-                      <IconUsers size={12} className="text-amber-400" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-300">
+                      <IconUsers size={12} className="text-[#93C5FD]" />
                       <span>{vehicle.capacity}</span>
                     </span>
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl sm:text-2xl font-black text-white mb-2 group-hover:text-amber-300 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-black text-white mb-2 group-hover:text-[#93C5FD] transition-colors">
                     {vehicle.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed mb-4 font-normal">
+                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed mb-4 font-normal">
                     {vehicle.description}
                   </p>
 
                   {/* Stage with Vehicle Image */}
-                  <div className="relative w-full h-44 sm:h-48 flex items-center justify-center p-2 my-2 bg-zinc-950/60 rounded-2xl border border-white/10 overflow-hidden">
-                    <div className="absolute inset-x-6 bottom-2 h-10 bg-amber-500/15 rounded-full blur-xl animate-pulse-glow" />
+                  <div className="relative w-full h-44 sm:h-48 flex items-center justify-center p-2 my-2 bg-[#0F172A]/80 rounded-2xl border border-white/10 overflow-hidden">
+                    <div className="absolute inset-x-6 bottom-2 h-10 bg-[#1E3A5F]/20 rounded-full blur-xl animate-pulse-glow" />
                     <img 
                       src={vehicle.image} 
                       alt={vehicle.name}
@@ -218,9 +218,9 @@ export default function VehiclesSection({
                       {vehicle.specs.map((spec, idx) => (
                         <div 
                           key={idx} 
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-zinc-800/90 border border-white/10 text-[11px] font-semibold text-zinc-100 shadow-sm"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#1E3A5F]/15 border border-[#1E3A5F]/30 text-[11px] font-semibold text-slate-100 shadow-sm"
                         >
-                          <IconCheck size={12} className="text-amber-400 shrink-0" />
+                          <IconCheck size={12} className="text-[#93C5FD] shrink-0" />
                           <span>{spec}</span>
                         </div>
                       ))}
@@ -232,10 +232,10 @@ export default function VehiclesSection({
                 <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                   <a
                     href={`tel:${COMPANY_INFO.phone}`}
-                    className="py-3 px-3.5 rounded-xl bg-zinc-800/90 hover:bg-zinc-700 border border-amber-500/30 text-amber-300 font-bold text-xs flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-sm cursor-pointer shrink-0"
+                    className="py-3 px-3.5 rounded-xl bg-[#E8F0F7] hover:bg-[#D4E4F3] border border-[#C5D8EA] text-[#1E3A5F] font-bold text-xs flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-sm cursor-pointer shrink-0"
                     title={`Call Abhishek Travels Dispatch for ${vehicle.name}`}
                   >
-                    <IconPhone size={14} className="text-amber-400" />
+                    <IconPhone size={14} className="text-[#1E3A5F]" />
                     <span>Call Now</span>
                   </a>
 
@@ -251,9 +251,9 @@ export default function VehiclesSection({
 
                   <button
                     onClick={() => onBookVehicle(vehicle)}
-                    className="py-3 px-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-zinc-950 font-black text-xs shadow-md shadow-amber-500/20 hover:brightness-110 flex items-center justify-center gap-1.5 transition-transform hover:scale-[1.02] active:scale-[0.98] border border-yellow-300/60 cursor-pointer shrink-0"
+                    className="py-3 px-3.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold text-xs shadow-md shadow-[#2563EB]/40 hover:brightness-110 flex items-center justify-center gap-1.5 transition-transform hover:scale-[1.02] active:scale-[0.98] border border-white/20 cursor-pointer shrink-0"
                   >
-                    <IconZap size={14} />
+                    <IconZap size={14} className="text-[#93C5FD]" />
                     <span>Book Vehicle</span>
                   </button>
                 </div>
